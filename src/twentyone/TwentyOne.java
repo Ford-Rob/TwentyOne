@@ -19,6 +19,7 @@ public class TwentyOne {
         TwentyOne myGame = new TwentyOne();
         myGame.getName();
         myGame.displayHelp();
+        myGame.gameMenu();
     }   
     
     public void getName() {
@@ -27,8 +28,14 @@ public class TwentyOne {
         this.playerName = input.next();            
     }
 
-    public void displayHelp(){
+    public void displayHelp() {
         System.out.println("\nWelcome " + this.playerName + "\n");
         System.out.println(this.instructions);
     }
+
+    public void gameMenu() {
+        System.out.println ( "1) Option 1\n2) Option 2\n3) Option 3" );
+        System.out.print ( "Selection: " );
+    }
+    
 }
