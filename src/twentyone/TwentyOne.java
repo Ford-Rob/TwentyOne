@@ -7,7 +7,7 @@ package pkgTwentyOne;
 import java.util.Scanner;
 
 /**
- *
+ * @author WMitchell
  * @author RFord
  */
 public class TwentyOne {
