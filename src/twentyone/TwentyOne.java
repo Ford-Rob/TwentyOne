@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package pkgTwentyOne;
+package twentyone;
 
 import java.util.Scanner;
 
@@ -20,15 +20,15 @@ public class TwentyOne {
         myGame.getName();
         myGame.displayHelp();
     }   
+    
     public void getName() {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter your name: ");
-        this.playerName = input.next();
-            
+        this.playerName = input.next();            
     }
 
-public void displayHelp(){
-    System.out.println("\nWelcome " + this.playerName + "\n");
-    System.out.println(this.instructions);
-}
+    public void displayHelp(){
+        System.out.println("\nWelcome " + this.playerName + "\n");
+        System.out.println(this.instructions);
+    }
 }
