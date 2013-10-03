@@ -35,7 +35,7 @@ public class TwentyOne {
         this.playerName = input.next();            
     }
 
-    public void displayHelp(){
+    public void displayHelp() {
         System.out.println("\nWelcome " + this.playerName + "\n");
         System.out.println(this.instructions);
     }
