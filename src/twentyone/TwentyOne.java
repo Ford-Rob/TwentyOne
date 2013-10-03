@@ -34,7 +34,7 @@ public class TwentyOne {
     }
 
     public void gameMenu() {
-        System.out.println ( "1) Option 1\n2) Option 2\n3) Option 3" );
+        System.out.println ("\n1) Start Game\n2) Help\n3) Exit\n");
         System.out.print ( "Selection: " );
     }
     
