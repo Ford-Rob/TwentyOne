@@ -25,6 +25,8 @@ public class TwentyOne {
         myGame.getName();
         myGame.displayHelp();
         myGame.displayMenu();
+        Card myCard = new Card();
+        myCard.displayCard();
     }   
     
     public void getName() {
@@ -41,5 +43,6 @@ public class TwentyOne {
         System.out.println("\nMain Menu\n\n ");
         System.out.println(this.menuItem1);
         System.out.println(this.menuItem2);
-        System.out.println(this.menuItem3);}
+        System.out.println(this.menuItem3);
+    }
 }
