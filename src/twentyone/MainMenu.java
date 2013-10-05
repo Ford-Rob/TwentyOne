@@ -9,9 +9,16 @@ package twentyone;
  * @author RFord
  */
 public class MainMenu {
+    String menuItem1 = "\nStart a Game";
+    String menuItem2 = "\nHelp";
+    String menuItem3 = "\nExit"
+            + "";
     
     
-    public void displayMenu() {
-        
+    public void displayMenu(){
+        System.out.println("\nMain Menu\n\n ");
+        System.out.println(this.menuItem1);
+        System.out.println(this.menuItem2);
+        System.out.println(this.menuItem3);
     }
 }
