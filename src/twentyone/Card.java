@@ -1,11 +1,10 @@
 /*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+y
  */
 package twentyone;
 
 /**
- *
+ * @author WMitchell
  * @author RFord
  */
 public class Card {

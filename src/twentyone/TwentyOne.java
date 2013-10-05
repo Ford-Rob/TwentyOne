@@ -17,14 +17,17 @@ public class TwentyOne {
             + "Try to get as close to 21 and beat the Dealer";
     String menuItem1 = "\nStart a Game";
     String menuItem2 = "\nHelp";
-    String menuItem3 = "\nExit"
-            + "";
+    String menuItem3 = "\nExit";
     
     public static void main(String[] args) {
         TwentyOne myGame = new TwentyOne();
         myGame.getName();
         myGame.displayHelp();
         myGame.displayMenu();
+        GameMenu myGameMenu = new GameMenu(); 
+        myGameMenu.displayGameMenu(); 
+        Table myTable = new Table();
+        myTable.displayChair();
         Card myCard = new Card();
         myCard.displayCard();
     }   
