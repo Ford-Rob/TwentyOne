@@ -13,8 +13,8 @@ public class MainMenu {
     String mainMenuItem1 = "\nStart Game";
     String mainMenuItem2 = "\nHelp";
     String mainMenuItem3 = "\nExit";
-        public void displayMainMenu(){
-        System.out.println("\nMain Menu\n\n ");
+        
+    public void displayMainMenu(){
         System.out.println(this.mainMenuItem1);
         System.out.println(this.mainMenuItem2);
         System.out.println(this.mainMenuItem3);

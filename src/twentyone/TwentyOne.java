@@ -22,7 +22,7 @@ public class TwentyOne {
         myGame.displayHelp();
         MainMenu myMainMenu = new MainMenu();
         myMainMenu.displayMainMenu();
-        Players myPlayers = new Players();
+        Player myPlayers = new Player();
         myPlayers.displayPlayers();
         Table myTable = new Table();
         myTable.displayChair();
