@@ -22,14 +22,17 @@ public class TwentyOne {
         myGame.displayHelp();
         MainMenu myMainMenu = new MainMenu();
         myMainMenu.displayMainMenu();
-        GameMenu myGameMenu = new GameMenu(); 
-        myGameMenu.displayGameMenu(); 
         Players myPlayers = new Players();
         myPlayers.displayPlayers();
         Table myTable = new Table();
         myTable.displayChair();
-        Card myCard = new Card();
-        myCard.displayCard();
+        Card myCard;
+        for (int i = 0; i < 2; i++ ) {
+            myCard = new Card();
+            myCard.displayCard();
+        }
+                GameMenu myGameMenu = new GameMenu(); 
+        myGameMenu.displayGameMenu(); 
         Results myResults = new Results();
         myResults.displayResults();
     }   
