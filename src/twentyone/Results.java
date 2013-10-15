@@ -13,7 +13,7 @@ public class Results {
     String Lost = "0";
     
     public void displayResults() {
-        System.out.println("\n\nWon " + this.Won + " Lost " 
+        System.out.println("\n\nWon: " + this.Won + " Lost: " 
                 + this.Lost + "\n");    
     }
 }
