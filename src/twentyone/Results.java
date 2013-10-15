@@ -9,11 +9,11 @@ package twentyone;
  * @author RFord
  */
 public class Results {
-    String Win = "1";
-    String Lose = "0";
+    String Won = "1";
+    String Lost = "0";
     
     public void displayResults() {
-        System.out.println("\nPlayer 1: Won " + this.Win + " Lost " 
-                + this.Lose + "\n");    
+        System.out.println("\n\nWon " + this.Won + " Lost " 
+                + this.Lost + "\n");    
     }
 }

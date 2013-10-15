@@ -1,6 +1,11 @@
 /*
- * This will hold the Player information for the game? 
- * I need to further clarify the purpose of this class.
+ * This will hold the Player information for the game. 
+ * 
+ * 10/14/13 Tried to use this class to complete Week 3 individual assignment and 
+ * add multiple players, but it is beyond me at this time. For now I will just 
+ * try to copy Rob's GameMenu design and apply it to the MainMenu so I can 
+ * learn from what he did.
+ * 
  * Assigned to WMitchell.
  */
 package twentyone;
@@ -10,11 +15,8 @@ package twentyone;
  * @author RFord
  */
 public class Player {
-        playerList = new Player[4]; //Trying to have to game add multiple players
-        //and save their data
-        int Numberofplayers = 0;     
-        playerList[Numberofplayers] = newPlayer; 
-        Numberofplayers++;  
+        int Numberofplayers = 1;     
+        
         
     public void getName() {
     
@@ -24,11 +26,8 @@ public class Player {
     
     public void displayPlayers() {
     System.out.println("\nNumber of Players: " + this.Numberofplayers);
-    }
-
-    private static class playerList {
-
-        public playerList() {
-        }
+    
     }
 }
+
+        
