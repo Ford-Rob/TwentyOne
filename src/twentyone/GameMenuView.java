@@ -60,17 +60,20 @@ public class GameMenuView {
         
         String gameStatus = "playing";
         do {
-            this.displayGameMenu();
+            displayGameMenu();
             
             //get commaned entered
-            String command = this.getCommand();
+            String command = getCommand();
             switch (command) {
                 case "H":
-                    this.gameMenuControl.hit();
+                    gameMenuControl.hit();
+                    if (TwentyOne.myHand.checkValue() >= 21) {
+                        return "QUIT";
+                    }
                     break;
                 case "S":
-                    this.gameMenuControl.stand();
-                    break; 
+                    gameMenuControl.stand();
+                    return "QUIT";
                 case "Q": 
                     return "QUIT";
             }
