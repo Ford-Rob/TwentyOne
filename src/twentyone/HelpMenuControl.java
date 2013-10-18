@@ -1,5 +1,5 @@
 /*
- * This will display the HelpMenuView Menu. 
+ * Controls the Help Menu. 
  * 
  */
 package twentyone;
