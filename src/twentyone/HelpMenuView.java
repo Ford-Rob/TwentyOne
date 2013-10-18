@@ -31,7 +31,7 @@ public class HelpMenuView {
         
         String gameStatus = "PLAYING";
         do {
-            this.display();
+            this.displayHelpMenu();
             
             //get commaned entered
             String command = this.getCommand();
@@ -51,7 +51,7 @@ public class HelpMenuView {
     }
 
         // displays the help menu
-    public final void display() {
+    public final void displayHelpMenu() {
         System.out.println("\n\t===============================================================");
         System.out.println("\tEnter the letter associated with one of the following commands:");
 

@@ -8,41 +8,33 @@ package twentyone;
  * @author WMitchell
  * @author RFord
  */
-public class HelpMenuControl {
-
-/**
- * Rules can be modified to simplify the game.
- */                
+public class HelpMenuControl {               
     
         public void displayHelpRules() {
         
         System.out.println(
 "\n21 RULES\n"+                
 "\nThe objective of the game is to get the highest total without exceeding 21.\n" +
-"Each player has an independent game against the dealer and the objective is to beat the dealer.\n" +
-"If the player's cards total is higher then 21, it is called a \"bust\" and the dealer wins, Even if the dealer has a bust as well.\n" +
-"If the player and the dealer have the same point value it counts as a draw and called a \"push\".\n" +
-"A 21 hand value is calculated as follows:\n" +
+"Each Player has an independent game against the Dealer.\n" +
+"If the Player's cards total is higher then 21 it is called a Bust and the Dealer wins even if they Bust as well.\n" +
+"If the Player and the Dealer have the same point value it counts as a draw and called a Push.\n" +
 "Cards of 2 - 10 are worth their face value.\n" +
 "Jack, Queen and King are worth 10 each.\n" +
-"The Ace card is worth 11, unless it causes the player to bust then the Ace can be counted as a 1.\n" +
-"A 2 cards hand with Ace and a 10 value card is called a \"blackjack\" and it is a winning hand unless the dealer has a blackjack hand as well, in which case it is a draw (\"push\").\n" +
-"After all players have placed their bets, the dealer deals each player with 2 cards including himself, the dealers first card will be face up and the other is face down.\n");        
+"The Ace is worth 11, unless it causes the player to bust, then the Ace is counted as 1.\n" +
+"A hand with an Ace and a 10 value card is called a Blackjack. It is a winning hand unless the Dealer has a Blackjack hand as well, in which case it is a Push.\n" +
+"To start, the Dealer deals each Player two cards including themselves, the first card will be face up and the other is face down.\n");        
     }
 
         public void displayHelpInstructions() {
         
         System.out.println(
 "\n21 PLAYER INSTRUCTIONS\n" +
-"\nIn 21, the player has 5 options for playing his hand:\n" +
+"\nThe Player has two options for playing their hand:\n" +
 "1. Hit - Get another card.\n" +
 "2. Stand - Stay with the current hand.\n" +
-"3. Surrender - Forfeit the hand and get back just half of the wager.\n" +
-"4. Double down - Double the bet amount and take just exactly 1 more card.\n" +
-"5. Split - possible only when both cards are of the same value, means to double the wager and have each card be the first card of a new hand.\n" +
-"The player finishes their turn when they decide to stand or double down or if they bust.\n" +
-"After all players have played their hand, the dealer revels his other card and starts to play his hand.\n" +
-"House rules say that the dealer must continue to Hit until he has at least 17.\n");
+"The Player finishes their turn when they decide to Stand or if they Bust.\n" +
+"After all Players have played their hand, the Dealer reveals their other card. The Dealer then plays their hand.\n" +
+"The Dealer must continue to Hit until they have at least 17.\n");
     
         }
 
