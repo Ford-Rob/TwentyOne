@@ -1,6 +1,6 @@
 /*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * Controls for the Game Menu 10/18/13 RFord
+ * 
  */
 package twentyone;
 

@@ -1,6 +1,6 @@
 /*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * Created 10/18/2013 to make the Hand, add Cards, Check the value and Display
+ * 
  */
 package twentyone;
 
