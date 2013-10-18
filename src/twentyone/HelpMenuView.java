@@ -52,13 +52,14 @@ public class HelpMenuView {
 
         // displays the help menu
     public final void displayHelpMenu() {
-        System.out.println("\n\t===============================================================");
-        System.out.println("\tEnter the letter associated with one of the following commands:");
+        System.out.println("\n♠♡♢♣♤♥♦♧♠♡♢♣♤♥♦♧♠♡♢♣♤♥♦♧");
+        System.out.println("          Help");
+        System.out.println("-------------------------");
 
         for (int i = 0; i < HelpMenuView.menuItems.length; i++) {
-            System.out.println("\t   " + menuItems[i][0] + "\t" + menuItems[i][1]);
+            System.out.println("   " + menuItems[i][0] + "\t" + menuItems[i][1]);
         }
-        System.out.println("\t===============================================================\n");
+        System.out.println("♠♡♢♣♤♥♦♧♠♡♢♣♤♥♦♧♠♡♢♣♤♥♦♧\n");
     }
 
     

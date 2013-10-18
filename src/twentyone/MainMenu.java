@@ -15,9 +15,9 @@ package twentyone;
 */
 public class MainMenu {
     short SuitNumber = 9824;
-    String mainMenuItem1 = "\n\tS-Start Game";
-    String mainMenuItem2 = "\tH-Help";
-    String mainMenuItem3 = "\tE-Exit";
+    String mainMenuItem1 = "\n   S    Start Game";
+    String mainMenuItem2 = "   H    Help";
+    String mainMenuItem3 = "   E    Exit";
     byte counter = 0;
     char border;
         
