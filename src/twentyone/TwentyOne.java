@@ -9,7 +9,7 @@ package twentyone;
  * @author RFord
  */
 public class TwentyOne {
-
+    public static Hand myHand = new Hand(); 
     
     public static void main(String[] args) {
         TwentyOne myGame = new TwentyOne();
@@ -17,6 +17,10 @@ public class TwentyOne {
         myMainMenu.displayMainMenu();
         HelpMenuView myHelpMenuView = new HelpMenuView();
         myHelpMenuView.getInput();
+        
+        GameMenuView myGameMenuView = new GameMenuView();
+        myGameMenuView.getInput();
+        
 
     }
 

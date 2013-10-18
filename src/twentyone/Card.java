@@ -12,10 +12,10 @@ public class Card {
     private String rank;
     private char suit;// 9827 Club, 9824 Spade, 9829 Heart, 9830 Diamond
     private int cardValue;
+    public String cardDisplay;
     
-    
-    public void displayCard() {
-        System.out.println("\t" + this.rank + " of " + this.suit +"\n");
+    public String toString() {
+        return cardDisplay;
     }
                 
     public int getCardValue() {
@@ -54,5 +54,6 @@ public class Card {
         } else if (rndNumber == 4) {
             suit = 9830;
         }
+        cardDisplay = this.rank + " of " + this.suit;
     }
 }
