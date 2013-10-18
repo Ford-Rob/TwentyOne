@@ -17,8 +17,8 @@ public class HelpMenuControl {
         public void displayHelpRules() {
         
         System.out.println(
-"\n\n21 RULES\n\n"+                
-"The objective of the game is to get the highest total without exceeding 21.\n" +
+"\n21 RULES\n"+                
+"\nThe objective of the game is to get the highest total without exceeding 21.\n" +
 "Each player has an independent game against the dealer and the objective is to beat the dealer.\n" +
 "If the player's cards total is higher then 21, it is called a \"bust\" and the dealer wins, Even if the dealer has a bust as well.\n" +
 "If the player and the dealer have the same point value it counts as a draw and called a \"push\".\n" +
@@ -33,8 +33,8 @@ public class HelpMenuControl {
         public void displayHelpInstructions() {
         
         System.out.println(
-"21 PLAYER INSTRUCTIONS\n" +
-"In 21, the player has 5 options for playing his hand:\n" +
+"\n21 PLAYER INSTRUCTIONS\n" +
+"\nIn 21, the player has 5 options for playing his hand:\n" +
 "1. Hit - Get another card.\n" +
 "2. Stand - Stay with the current hand.\n" +
 "3. Surrender - Forfeit the hand and get back just half of the wager.\n" +

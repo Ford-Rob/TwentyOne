@@ -29,7 +29,7 @@ public class HelpMenuView {
     // display the help menu and get the end users input selection
     public String getInput() {       
         
-        String gameStatus = Game.PLAYING;
+        String gameStatus = "PLAYING";
         do {
             this.display();
             
