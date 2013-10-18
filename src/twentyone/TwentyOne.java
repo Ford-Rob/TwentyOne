@@ -15,11 +15,17 @@ public class TwentyOne {
         TwentyOne myGame = new TwentyOne();
         MainMenu myMainMenu = new MainMenu();
         myMainMenu.displayMainMenu();
+        HelpMenuView myHelpMenuView = new HelpMenuView();
+        myHelpMenuView.getInput();
 
     }
+
+
+        
+
         /**
          * 
-         * HIDING THIS CODE FOR NOW TO TEST HELP MENU
+         * HIDING THIS CODE UNTIL IT IS NEEDED
          * 
          * Player myPlayer = new Player();
          * myPlayer.multiPlayer();
@@ -43,4 +49,3 @@ public class TwentyOne {
         */
     
     }
-}

@@ -1,8 +1,8 @@
 /*
 * This will be the Main Menu for the game.
 * 
-* 10/14/13 I copied Rob's GameMenu design and applied it to the 
-* MainMenu so I can learn from what he did and improve the menu.
+* 10/14/13 I copied Rob's GameMenu boarder and applied it to the 
+* MainMenu improve the menu.
 * 
 * Assigned to WMitchell.
 */
