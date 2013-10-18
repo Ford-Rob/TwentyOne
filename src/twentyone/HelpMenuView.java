@@ -75,7 +75,7 @@ public class HelpMenuView {
             command = command.trim().toUpperCase();
             valid = validCommand(command);
             if (!valid) {
-                new TicTacToeError().displayError("Invalid command. Please enter a valid command.");
+                new TwentyOneError().displayError("Invalid command. Please enter a valid command.");
                 continue;
             }
                 
