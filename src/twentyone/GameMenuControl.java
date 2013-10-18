@@ -18,7 +18,7 @@ public class GameMenuControl {
              
     }
     public void stand(){
-        
+        System.out.println("The Value of Your Hand is " + TwentyOne.myHand.checkValue());        
     }
 
     

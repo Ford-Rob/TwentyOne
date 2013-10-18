@@ -23,6 +23,7 @@ public class GameMenuView {
     private GameMenuControl gameMenuControl = new GameMenuControl();
     
         public void displayGameMenu(){
+
             while (++counter < 25){
                     border=(char)SuitNumber;
                     System.out.print(border);
