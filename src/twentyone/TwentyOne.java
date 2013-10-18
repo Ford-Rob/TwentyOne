@@ -15,7 +15,8 @@ public class TwentyOne {
         TwentyOne myGame = new TwentyOne();
         MainMenu myMainMenu = new MainMenu();
         myMainMenu.displayMainMenu();
-        
+
+    }
         /**
          * 
          * HIDING THIS CODE FOR NOW TO TEST HELP MENU
