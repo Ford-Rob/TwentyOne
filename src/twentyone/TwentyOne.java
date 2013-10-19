@@ -9,11 +9,10 @@ package twentyone;
  * @author RFord
  */
 public class TwentyOne {
-
     
     public static void main(String[] args) {
         TwentyOne myGame = new TwentyOne();
-        MainMenu myMainMenu = new MainMenu();
+        MainMenuView myMainMenu = new MainMenuView();
         myMainMenu.displayMainMenu();
         HelpMenuView myHelpMenuView = new HelpMenuView();
         myHelpMenuView.getInput();
