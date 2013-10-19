@@ -9,6 +9,7 @@ package twentyone;
  * @author RFord
  */
 public class TwentyOne {
+    public static Hand myHand = new Hand(); 
     
     public static void main(String[] args) {
         TwentyOne myGame = new TwentyOne();
@@ -16,7 +17,18 @@ public class TwentyOne {
         myMainMenu.displayMainMenu();
         HelpMenuView myHelpMenuView = new HelpMenuView();
         myHelpMenuView.getInput();
+        TwentyOne.myHand.displayHand();
+        System.out.println("The Value of Your Hand is " + TwentyOne.myHand.checkValue());
         
+        GameMenuView myGameMenuView = new GameMenuView();
+        myGameMenuView.getInput();
+        
+
+    }
+
+
+        
+
         /**
          * 
          * HIDING THIS CODE UNTIL IT IS NEEDED
@@ -43,4 +55,3 @@ public class TwentyOne {
         */
     
     }
-}
