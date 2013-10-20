@@ -8,6 +8,8 @@
 
 package twentyone;
 
+import java.util.Scanner;
+
 /**
 * @author WMitchell
 * @author RFord

@@ -14,11 +14,12 @@ public class TwentyOne {
     public static void main(String[] args) {
         TwentyOne myGame = new TwentyOne();
         MainMenuView myMainMenu = new MainMenuView();
-        myMainMenu.getInput();
+        String input = myMainMenu.getInput(myGame);
         HelpMenuView myHelpMenuView = new HelpMenuView();
         myHelpMenuView.getInput();
-        TwentyOne.myHand.displayHand();
-        System.out.println("The Value of Your Hand is " + TwentyOne.myHand.checkValue());
+        //Rob, Moved this code here to MainMenuView to diplay before GameMenu. The game is taking shape! I keep going bust. haha
+        //TwentyOne.myHand.displayHand();
+        //System.out.println("The Value of Your Hand is " + TwentyOne.myHand.checkValue());
         
         GameMenuView myGameMenuView = new GameMenuView();
         myGameMenuView.getInput();

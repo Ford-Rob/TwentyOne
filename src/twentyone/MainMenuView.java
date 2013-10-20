@@ -15,14 +15,13 @@ import java.util.Scanner;
 * @author RFord
 */
 public class MainMenuView {
-    short SuitNumber = 9824;
+    
     private final static String[][] menuItems = {
-        {"S", "Start Game"},
-        {"H", "Help"},        
-        {"X", "eXit"}        
+        {"1", "Start Game"},
+        {"2", "Help"},        
+        {"3", "Exit"}        
     };
-    byte counter = 0;
-    char border;
+    
     
         // Create instance of the HelpMenuControl (action) class
     MainMenuControl mainMenuControl = new MainMenuControl();
@@ -34,22 +33,24 @@ public class MainMenuView {
     
     public String getInput(Object object) {       
         
-        TwentyOne myGame = new TwentyOne();
+        String gameStatus = Game.PLAYING;
         do {
             this.displayMainMenu();
 
             // get commaned entered
             String command = this.getCommand();
             switch (command) {
-                case "S":
+                case "1":
+                    TwentyOne.myHand.displayHand();
+        System.out.println("The Value of Your Hand is " + TwentyOne.myHand.checkValue());
                     GameMenuView myGameMenuView = new GameMenuView();
                     myGameMenuView.getInput();
                     break;
-                case "H":
+                case "2":
                     HelpMenuView myHelpMenuView = new HelpMenuView();
                     myHelpMenuView.getInput();
                     break;
-                case "X":
+                case "3":
                     return "QUIT";
             }
         } while (!gameStatus.equals("QUIT"));
@@ -91,36 +92,18 @@ public class MainMenuView {
     }
         
     public void displayMainMenu(){
-        while (++counter < 25){
-                    border=(char)SuitNumber;
-                    System.out.print(border);
-                    if (SuitNumber > 9830) {    
-                        SuitNumber = 9824;
-                    } else {++SuitNumber;
-                    }      
-            }                           
-            System.out.println("\n\tMain Menu ");
-            counter = 0;
-            while (++counter < 26){
-                    border=(char)SuitNumber;
-                    System.out.print("-");
- 
-            }  
+        
+        System.out.println("\n♠♡♢♣♤♥♦♧♠♡♢♣♤♥♦♧♠♡♢♣♤♥♦♧");
+        System.out.println("        Main Menu");
+        System.out.println("-------------------------");
+
         for (int i = 0; i < MainMenuView.menuItems.length; i++) {
             System.out.println("   " + menuItems[i][0] + "\t" + menuItems[i][1]);
         }
-        counter = 0;
-            while (++counter < 25){
-                    border=(char)SuitNumber;
-                    System.out.print(border);
-                    if (SuitNumber > 9830) {    
-                        SuitNumber = 9824;
-                    } else {++SuitNumber;}
+        System.out.println("♠♡♢♣♤♥♦♧♠♡♢♣♤♥♦♧♠♡♢♣♤♥♦♧\n");
+    }
         
     
                     
              
     }
-    
-    }
-}
