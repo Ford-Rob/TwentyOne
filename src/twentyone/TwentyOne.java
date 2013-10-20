@@ -14,7 +14,7 @@ public class TwentyOne {
     public static void main(String[] args) {
         TwentyOne myGame = new TwentyOne();
         MainMenuView myMainMenu = new MainMenuView();
-        myMainMenu.displayMainMenu();
+        myMainMenu.getInput();
         HelpMenuView myHelpMenuView = new HelpMenuView();
         myHelpMenuView.getInput();
         TwentyOne.myHand.displayHand();
