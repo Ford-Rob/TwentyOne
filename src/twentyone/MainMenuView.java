@@ -41,6 +41,7 @@ public class MainMenuView {
             String command = this.getCommand();
             switch (command) {
                 case "1":
+                    System.out.println("");
                     TwentyOne.myHand.displayHand();
         System.out.println("The Value of Your Hand is " + TwentyOne.myHand.checkValue());
                     GameMenuView myGameMenuView = new GameMenuView();

@@ -15,7 +15,7 @@ public class GameMenuControl {
         TwentyOne.myHand.displayHand();
         System.out.println("The Value of Your Hand is " + TwentyOne.myHand.checkValue());
         if (TwentyOne.myHand.checkValue() > 21) {
-            System.out.println("You have busted");
+            System.out.println("You have Busted");
 //            String gameStatus = "QUIT";
             
         } else if (TwentyOne.myHand.checkValue() == 21) {

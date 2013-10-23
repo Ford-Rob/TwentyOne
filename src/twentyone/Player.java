@@ -1,12 +1,8 @@
 /*
- * This will hold the Player information for the game. 
- * 
- * 10/12 Tried to use this class to complete Week 3 individual assignment and 
- * add multiple players. Maybe I have a foundation, but it is currently beyond 
- * to get it to work.
+ * This will hold the Player information for the Player and the Dealer. 
  * 
  * 10/14 See MainMenu class. I was able to move all of the Player code from the 
- * TwentyOne class to here. Making progress on adding multiple players. 
+ * TwentyOne class to here. 
  * 
  * Assigned to WMitchell.
  */
@@ -19,21 +15,18 @@ import java.util.Scanner;
  * @author RFord
  */
 public class Player {
-    static String playerName;
-    int numberofPlayers;     
+    static String playerName;     
         
         
     public void getName() {
         Scanner input = new Scanner(System.in);
-        System.out.println("\nEnter your name: ");
+        System.out.println("\nPlease enter your name: ");
         playerName = input.next();     
-        System.out.println("\nWelcome " + Player.playerName + "\n");
+        System.out.println("\nGood Luck " + Player.playerName + "!\n");
     }           
     
-    public void multiPlayer() {
-        Scanner input = new Scanner(System.in);
-        System.out.println("\nNumber of Players: ");
-        numberofPlayers = input.nextInt();
+    public void Dealer() {
+        
     
     
     }

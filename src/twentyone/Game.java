@@ -10,18 +10,16 @@ package twentyone;
  *
  */
 public class Game {
-    public final static String PLAYER_A_DEFAULT_MARKER = "X";
-    public final static String PLAYER_B_DEFAULT_MARKER = "O";
-    
     
     public static final String ONE_PLAYER = "ONE_PLAYER";
+    //Player 2, B...is the Dealer
     public static final String TWO_PLAYER = "TWO_PLAYER";
     
     public static final String CONTINUE = "CONTINUE";
     public static final String NEW_GAME = "NEW_GAME";
     public static final String PLAYING = "PLAYING"; 
     public static final String WINNER = "WINNER"; 
-    public static final String TIE = "TIE"; 
+    public static final String PUSH = "PUSH"; 
     public static final String QUIT = "QUIT"; 
     public static final String ERROR = "ERROR";
     public static final String EXIT = "EXIT";
@@ -174,15 +172,15 @@ public class Game {
         
     }
 
-    public void recordTie() {
-        //long player1Ties = this.playerA.getTies();
-        //player1Ties++;
-        //this.playerA.setTies(player1Ties);
-        //long player2Ties = this.playerB.getTies();
-        //player2Ties++;
-        //this.playerB.setTies(player2Ties);
+    public void recordPush() {
+        //long player1Push = this.playerA.getPush();
+        //player1Push++;
+        //this.playerA.setPush(player1Push);
+        //long player2Push = this.playerB.getPush();
+        //player2Push++;
+        //this.playerB.setPush(player2Push);
 
-        this.setStatus(Game.TIE);
+        this.setStatus(Game.PUSH);
        
     }
 
@@ -190,14 +188,14 @@ public class Game {
 
     //public String getWinningMessage () {
         //return "\n\t*******************************************************************************"
-             //+ "\n\t Congratulations " + winner.getName() + "! You won the game."
-             //+ "\n\t Sorry " + loser.getName() + ", You are the loser." 
+             //+ "\n\t Congratulations " + winner.getName() + "! You beat the Dealer."
+             //+ "\n\t Sorry " + loser.getName() + ", Dealer wins." 
              //+ "\n\t*******************************************************************************";
     //}
 
-    public String getTiedMessage () {
+    public String getPushMessage () {
        return "\n\t*******************************************************************************"
-             + "\n\t The game is a tie. Better luck next time!" 
+             + "\n\t The game is a Push. Better luck next time!" 
              + "\n\t*******************************************************************************";
     }
 }
