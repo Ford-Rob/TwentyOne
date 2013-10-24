@@ -195,7 +195,7 @@ public class Game {
 
     public String getPushMessage () {
        return "\n\t*******************************************************************************"
-             + "\n\t The game is a Push. Better luck next time!" 
+             + "\n\t The game is a Push." 
              + "\n\t*******************************************************************************";
     }
 }
