@@ -18,7 +18,7 @@ public class Results {
     }
     
             private boolean isLoser() {
-                
+             String gameStatus = Game.QUIT;   
         for (int handValue = 22; handValue <= 30; handValue++) {
                 if (handValue >= 21) { 
                     return true;
