@@ -12,8 +12,8 @@ public class Results {
     String Won = "1";
     
     public void displayResults() {
-        System.out.println("\n" + Player.playerName + "'s Results\n\nWon: " + this.Won + " Lost: " 
-                + this.isLoser() +"\n");
+//        System.out.println("\n" + Player.playerName + "'s Results\n\nWon: " + this.Won + " Lost: " 
+//                + this.isLoser() +"\n");
    
     }
     
