@@ -15,7 +15,7 @@ import java.util.Scanner;
  * @author RFord
  */
 public class Player {
-    private String[] playerName = new String[0];
+    String[] playerName = new String[0];
     int numberofPlayers = 0; 
     int kbdInput;
     String stringInput;
