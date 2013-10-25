@@ -10,10 +10,13 @@ public class TwentyOne {
     public static void main(String[] args) {
         TwentyOne myGame = new TwentyOne();
         System.out.println("\nWelcome to 21.");
-        Player myPlayer = new Player();
-        myPlayer.getName();
+//        Player myPlayer = new Player();
+//       myPlayer.getName();
         MainMenuView myMainMenu = new MainMenuView();
-        String input = myMainMenu.getInput(myGame);
+        myMainMenu.displayMainMenu();
+        Player myPlayer = new Player();
+        myPlayer.multiPlayer();
+        myPlayer.getName();
         HelpMenuView myHelpMenuView = new HelpMenuView();
         myHelpMenuView.getInput();
         //Rob, Moved your code here to MainMenuView to diplay before GameMenu. The game is taking shape! I keep going bust. haha
