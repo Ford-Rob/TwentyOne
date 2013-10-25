@@ -15,6 +15,9 @@ public class TwentyOne {
         TwentyOne myGame = new TwentyOne();
         MainMenuView myMainMenu = new MainMenuView();
         myMainMenu.displayMainMenu();
+        Player myPlayer = new Player();
+        myPlayer.multiPlayer();
+        myPlayer.getName();
         HelpMenuView myHelpMenuView = new HelpMenuView();
         myHelpMenuView.getInput();
         TwentyOne.myHand.displayHand();

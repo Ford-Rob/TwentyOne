@@ -19,24 +19,45 @@ import java.util.Scanner;
  * @author RFord
  */
 public class Player {
-    static String playerName;
-    int numberofPlayers;     
+    private String[] playerName = new String[0];
+    int numberofPlayers = 0; 
+    int kbdInput;
+    String stringInput;
+    static Scanner input = new Scanner(System.in);
+    String nameInput;
         
         
     public void getName() {
-        Scanner input = new Scanner(System.in);
-        System.out.println("\nEnter your name: ");
-        playerName = input.next();     
-        System.out.println("\nWelcome " + Player.playerName + "\n");
+        for (int i=0; i < playerName.length; i++){        
+            System.out.println("\nEnter your name: ");
+            nameInput = Player.input.next();
+            playerName[i] = nameInput;
+            System.out.println("\nWelcome " + playerName[i] + "\n");
+        }
     }           
     
     public void multiPlayer() {
-        Scanner input = new Scanner(System.in);
-        System.out.println("\nNumber of Players: ");
-        numberofPlayers = input.nextInt();
-    
+        while(numberofPlayers == 0) {
+            
+            System.out.println("\nNumber of Players (1 or 2): ");
+            stringInput = Player.input.next();
+            try {
+                kbdInput = Integer.parseInt(stringInput);                
+            } catch(NumberFormatException e) {
+                kbdInput = 0;
+            }
+
+            if (kbdInput == 1){
+                numberofPlayers = 1;
+                playerName = new String[1];
+                continue;
+            } else if (kbdInput == 2){
+                numberofPlayers = 2;
+                playerName = new String[2];
+                continue;
+            } else System.out.println("Please enter a 1 or a 2");
+        }
     
     }
 }
 
-        
