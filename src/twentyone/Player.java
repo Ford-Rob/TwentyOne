@@ -15,12 +15,12 @@ import java.util.Scanner;
  * @author RFord
  */
 public class Player {
-    String[] playerName = new String[0];
+    static String[] playerName = new String[0];
     int numberofPlayers = 0; 
     int kbdInput;
     String stringInput;
     static Scanner input = new Scanner(System.in);
-    String nameInput;
+    static String nameInput;
         
         
     public void getName() {

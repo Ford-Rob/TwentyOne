@@ -6,11 +6,11 @@ package twentyone;
  */
 public class TwentyOne {
     public static Hand myHand = new Hand(); 
+    public static Player myPlayer = new Player();
     
     public static void main(String[] args) {
         TwentyOne myGame = new TwentyOne();
         System.out.println("\nWelcome to 21.");
-        Player myPlayer = new Player();
         myPlayer.multiPlayer();
         myPlayer.getName();
         MainMenuView myMainMenuView = new MainMenuView();
