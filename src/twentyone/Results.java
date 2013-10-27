@@ -25,16 +25,17 @@ public class Results {
    
     }
     
-            private boolean isLoser() {
-             String gameStatus = Game.QUIT;   
+            public int isLoser() {   
         
-        for (int handValue = 22; handValue <= 30; handValue++) {
-                if (handValue >= 21) { 
-                    return true;
+        for (int i=0; i < 1000; i++) {
+                if (TwentyOne.myHand.checkValue() >= 21) { 
+                    return 1;
                 }
-            }
-        return true;
-    
+                else
+                    
+        return 1;
+        }
+                
 //    This code is just to use in my for loops
 //if (TwentyOne.myHand.checkValue() > 21) {
 //            System.out.println("You have Busted");
@@ -44,6 +45,7 @@ public class Results {
 //            System.out.println("21! You win!");
 //            String gameStatus = "QUIT";
 //        } 
+        
     
 
 }
