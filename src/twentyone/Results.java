@@ -27,15 +27,16 @@ public class Results {
     
             public int isLoser() {   
         
-        for (int i=0; i < 1000; i++) {
+        for (int i=0; i < 100; i++) {
                 if (TwentyOne.myHand.checkValue() >= 21) { 
                     return 1;
                 }
                 else
                     
-        return 1;
+        return 0;
         }
-                
+        return 1;
+            }
 //    This code is just to use in my for loops
 //if (TwentyOne.myHand.checkValue() > 21) {
 //            System.out.println("You have Busted");
@@ -50,5 +51,3 @@ public class Results {
 
 }
 
-    
-}
