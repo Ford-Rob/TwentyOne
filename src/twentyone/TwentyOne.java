@@ -20,8 +20,8 @@ public class TwentyOne {
         HelpMenuView myHelpMenuView = new HelpMenuView();
         myHelpMenuView.getInput();
         //Rob, Moved your code here to MainMenuView to diplay before GameMenu. The game is taking shape! I keep going bust. haha
-        //TwentyOne.myHand.displayHand();
-        //System.out.println("The Value of Your Hand is " + TwentyOne.myHand.checkValue());
+        TwentyOne.myHand.displayHand();
+        System.out.println("The Value of Your Hand is " + TwentyOne.myHand.checkValue());
         GameMenuView myGameMenuView = new GameMenuView();
         myGameMenuView.getInput();
         Results myResults = new Results();
