@@ -6,15 +6,11 @@ package twentyone;
  */
 public class TwentyOne {
     public static Hand myHand = new Hand(); 
+    public static Player myPlayer = new Player();
     
     public static void main(String[] args) {
         TwentyOne myGame = new TwentyOne();
         System.out.println("\nWelcome to 21.");
-//        Player myPlayer = new Player();
-//       myPlayer.getName();
-        MainMenuView myMainMenu = new MainMenuView();
-        myMainMenu.displayMainMenu();
-        Player myPlayer = new Player();
         myPlayer.multiPlayer();
         myPlayer.getName();
         HelpMenuView myHelpMenuView = new HelpMenuView();
@@ -27,9 +23,5 @@ public class TwentyOne {
         Results myResults = new Results();
         myResults.displayResults();
     }
-        
-        /** Table myTable = new Table();
-         * myTable.displayChair();
-        */
     
     }
