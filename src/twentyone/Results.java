@@ -27,8 +27,8 @@ public class Results {
     
             public int isLoser() {   
         
-        for (int i=0; i < 100; i++) {
-                if (TwentyOne.myHand.checkValue() >= 21) { 
+        for (int i=0; i < 1000; i++) {
+                if (TwentyOne.myHand.checkValue() > 21) { 
                     return 1;
                 }
                 else
