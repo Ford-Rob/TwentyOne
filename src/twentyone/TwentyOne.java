@@ -17,9 +17,9 @@ public class TwentyOne {
         MainMenuView myMainMenuView = new MainMenuView();
         myMainMenuView.getInput(myDeck);
         myDeck.initDeck();
-        myDeck.showDeck();
+
         myDeck.shuffleDeck();
-        myDeck.showDeck();
+
         TwentyOne.myHand.displayHand();
         System.out.println("The Value of Your Hand is " + TwentyOne.myHand.checkValue());
         GameMenuView myGameMenuView = new GameMenuView();

@@ -43,9 +43,9 @@ public class MainMenuView {
             switch (command) {
                 case "1":
                     myDeck.initDeck();
-                    myDeck.showDeck();
+
                     myDeck.shuffleDeck();
-                    myDeck.showDeck();
+
                     System.out.println("");
                     TwentyOne.myHand.displayHand();
         System.out.println("The Value of Your Hand is " + TwentyOne.myHand.checkValue());

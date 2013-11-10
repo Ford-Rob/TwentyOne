@@ -24,8 +24,9 @@ public class Player {
         
         
     public void getName() {
-        for (int i=0; i < playerName.length; i++){        
-            System.out.println("\nEnter your name: ");
+        for (int i=0; i < playerName.length; i++){ 
+            int pnum =i+1;
+            System.out.println("\nPlayer " + pnum + " Enter your name: ");
             nameInput = Player.input.next();
             playerName[i] = nameInput;
             System.out.println("\nWelcome " + playerName[i] + "\n");
