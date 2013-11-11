@@ -11,8 +11,15 @@ package twentyone;
 public class Hand {
     int place = 2;
      Card[] hand = new Card[5];
+     
         
      public Hand(){
+         hand[0] = new Card();
+         hand[1] = new Card();
+     }
+     public void initHand(){
+         hand = new Card[5];
+         place = 2;         
          hand[0] = new Card();
          hand[1] = new Card();
      }
@@ -28,6 +35,7 @@ public class Hand {
         return handValue;
         
     }
+    
     public void displayHand(){
         for (int i = 0; i < place; i++){
             System.out.println(hand[i]);

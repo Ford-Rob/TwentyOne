@@ -11,7 +11,7 @@ package twentyone;
 public class GameMenuControl {
     
     public void hit(){
-        TwentyOne.myHand.addCard();
+       TwentyOne.myHand.addCard();
         TwentyOne.myHand.displayHand();
         System.out.println("The Value of Your Hand is " + TwentyOne.myHand.checkValue());
         if (TwentyOne.myHand.checkValue() > 21) {

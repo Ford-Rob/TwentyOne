@@ -5,7 +5,7 @@ package twentyone;
  * @author RFord
  */
 public class TwentyOne {
-    public static Hand myHand = new Hand(); 
+    public static Hand myHand = new Hand();
     public static Player myPlayer = new Player();
     public static Deck myDeck = new Deck();
     
@@ -16,16 +16,16 @@ public class TwentyOne {
         myPlayer.getName();
         MainMenuView myMainMenuView = new MainMenuView();
         myMainMenuView.getInput(myDeck);
+        /**
         myDeck.initDeck();
-
         myDeck.shuffleDeck();
-
         TwentyOne.myHand.displayHand();
         System.out.println("The Value of Your Hand is " + TwentyOne.myHand.checkValue());
         GameMenuView myGameMenuView = new GameMenuView();
         myGameMenuView.getInput();
         Results myResults = new Results();
-        myResults.displayResults();
+        myResults.displayResults(); */
+        
         
         
     }
