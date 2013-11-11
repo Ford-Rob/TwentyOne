@@ -56,5 +56,10 @@ public class Player {
         }
     
     }
+    //needs an integer 1 or 2
+    public String currentPlayer(int current) {
+        return playerName[current];
+        
+    }
 }
 

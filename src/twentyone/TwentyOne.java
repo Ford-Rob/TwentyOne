@@ -1,5 +1,7 @@
 package twentyone;
 
+import static twentyone.Player.playerName;
+
 /**
  * @author WMitchell
  * @author RFord
@@ -8,6 +10,7 @@ public class TwentyOne {
     public static Hand myHand = new Hand();
     public static Player myPlayer = new Player();
     public static Deck myDeck = new Deck();
+    public static int currentPlayer;
     
     public static void main(String[] args) {
         TwentyOne myGame = new TwentyOne();
@@ -16,6 +19,7 @@ public class TwentyOne {
         myPlayer.getName();
         MainMenuView myMainMenuView = new MainMenuView();
         myMainMenuView.getInput(myDeck);
+        }
         /**
         myDeck.initDeck();
         myDeck.shuffleDeck();
@@ -30,4 +34,4 @@ public class TwentyOne {
         
     }
     
-    }
+    

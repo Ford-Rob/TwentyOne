@@ -97,9 +97,9 @@ public class MainMenuView {
     }
         
     public void displayMainMenu(){
-        
+
         System.out.println("\n♠♡♢♣♤♥♦♧♠♡♢♣♤♥♦♧♠♡♢♣♤♥♦♧");
-        System.out.println("        Main Menu");
+        System.out.println("   " + TwentyOne.myPlayer.currentPlayer(TwentyOne.currentPlayer) + "'s Main Menu");
         System.out.println("-------------------------");
 
         for (int i = 0; i < MainMenuView.menuItems.length; i++) {
