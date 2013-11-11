@@ -37,29 +37,33 @@ public class MainMenuView {
         String gameStatus = Game.PLAYING;
         do {
             this.displayMainMenu();
-
             // get commaned entered
             String command = this.getCommand();
             switch (command) {
                 case "1":
+                    for (int i = 0; i< TwentyOne.myPlayer.numberofPlayers; i++ ){
                     myDeck.initDeck();
                     myDeck.shuffleDeck();
-                    System.out.println("");
+                    System.out.println(TwentyOne.myPlayer.currentPlayer(i) + "'s Turn");
                     TwentyOne.myHand.initHand();
                     TwentyOne.myHand.displayHand();
                     System.out.println("The Value of Your Hand is " + TwentyOne.myHand.checkValue() + "\n");
                     GameMenuView myGameMenuView = new GameMenuView();
                     myGameMenuView.getInput();
+                    }
+
                     break;
                 case "2":
                     HelpMenuView myHelpMenuView = new HelpMenuView();
                     myHelpMenuView.getInput();
+
                     break;
                 case "3":
+
                     return "QUIT";
             }
         } while (!gameStatus.equals("QUIT"));
-
+        TwentyOne.currentPlayer ++;
         return "QUIT";
     }
     
@@ -99,7 +103,7 @@ public class MainMenuView {
     public void displayMainMenu(){
 
         System.out.println("\n♠♡♢♣♤♥♦♧♠♡♢♣♤♥♦♧♠♡♢♣♤♥♦♧");
-        System.out.println("   " + TwentyOne.myPlayer.currentPlayer(TwentyOne.currentPlayer) + "'s Main Menu");
+        System.out.println("       Main Menu");
         System.out.println("-------------------------");
 
         for (int i = 0; i < MainMenuView.menuItems.length; i++) {

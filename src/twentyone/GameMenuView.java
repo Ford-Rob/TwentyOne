@@ -32,7 +32,7 @@ public class GameMenuView {
                     } else {++SuitNumber;
                     }      
             }                           
-            System.out.println("\n\tGame Menu ");
+            System.out.println("\n\tGame Menu");
             counter = 0;
             while (++counter < 26){
                     border=(char)SuitNumber;
