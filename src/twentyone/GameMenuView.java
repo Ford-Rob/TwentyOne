@@ -60,9 +60,17 @@ public class GameMenuView {
         
         String gameStatus = "playing";
         do {
+            int check = TwentyOne.myHand.checkValue();
+            if (check == 21) {
+                System.out.println("21 you win!");
+                return "QUIT";
+                } else {
+                    System.out.println("The Value of Your Hand is " + TwentyOne.myHand.checkValue());
+                    }
             displayGameMenu();
             
             //get commaned entered
+
             String command = getCommand();
             switch (command) {
                 case "H":
