@@ -38,8 +38,9 @@ public class Hand {
     
     public void displayHand(){
         for (int i = 0; i < place; i++){
-            System.out.println(hand[i]);
+            System.out.print(hand[i] + " ");
         }
+        System.out.println("");
     }
 
 }

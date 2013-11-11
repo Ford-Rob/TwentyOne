@@ -64,9 +64,7 @@ public class GameMenuView {
             if (check == 21) {
                 System.out.println("21 you win!");
                 return "QUIT";
-                } else {
-                    System.out.println("The Value of Your Hand is " + TwentyOne.myHand.checkValue());
-                    }
+                } 
             displayGameMenu();
             
             //get commaned entered

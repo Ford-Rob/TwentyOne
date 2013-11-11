@@ -54,6 +54,6 @@ public class Card {
         } else if (rndNumber == 4) {
             suit = 9830;
         }
-        cardDisplay = this.rank + " of " + this.suit;
+        cardDisplay = this.rank + "" + this.suit;
     }
 }

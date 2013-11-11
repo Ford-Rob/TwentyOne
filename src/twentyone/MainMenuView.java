@@ -47,7 +47,7 @@ public class MainMenuView {
                     System.out.println("");
                     TwentyOne.myHand.initHand();
                     TwentyOne.myHand.displayHand();
-
+                    System.out.println("The Value of Your Hand is " + TwentyOne.myHand.checkValue() + "\n");
                     GameMenuView myGameMenuView = new GameMenuView();
                     myGameMenuView.getInput();
                     break;

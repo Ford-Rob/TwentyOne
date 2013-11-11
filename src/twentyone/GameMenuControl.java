@@ -13,7 +13,7 @@ public class GameMenuControl {
     public void hit(){
        TwentyOne.myHand.addCard();
         TwentyOne.myHand.displayHand();
-        System.out.println("The Value of Your Hand is " + TwentyOne.myHand.checkValue());
+        System.out.println("The Value of Your Hand is " + TwentyOne.myHand.checkValue() + "\n");
         if (TwentyOne.myHand.checkValue() > 21) {
             System.out.println("You have Busted");
 //            String gameStatus = "QUIT";
@@ -26,7 +26,7 @@ public class GameMenuControl {
              
     
     public void stand(){
-        System.out.println("The Value of Your Hand is " + TwentyOne.myHand.checkValue());
+        System.out.println("The Value of Your Hand is " + TwentyOne.myHand.checkValue() + "\n");
 //        String gameStatus = "QUIT";
     }
 
