@@ -1,6 +1,6 @@
 /*
  * This will set up the game menu 
- * assigned to RFord
+ * assigned to RFord - check
  */
 package twentyone;
 
