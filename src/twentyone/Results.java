@@ -48,7 +48,7 @@ public class Results {
             }
            
 //            11/2/13 Lesson 6 Individual Assignment for Wade Mitchell.
-//            I will activate this code after the game has 
+//            I'm going to activate this code after the game has 
 //            developed further.
                     
             public static void displayTotalResults (String[] args){
