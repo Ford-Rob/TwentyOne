@@ -17,8 +17,8 @@ public class TwentyOne {
         System.out.println("\n" + "Welcome to 21.");
         myPlayer.multiPlayer();
         myPlayer.getName();
-        MainMenuView myMainMenuView = new MainMenuView();
-        myMainMenuView.getInput(myDeck);
+        MainMenu myMainMenu = new MainMenu();
+        myMainMenu.getInput(myDeck);
         }
         /**
         myDeck.initDeck();

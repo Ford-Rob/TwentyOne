@@ -15,7 +15,7 @@ import static twentyone.TwentyOne.myDeck;
 * @author WMitchell
 * @author RFord
 */
-public class MainMenuView {
+public class MainMenu {
     
     private final static String[][] menuItems = {
         {"1", "Start Game"},
@@ -25,10 +25,10 @@ public class MainMenuView {
     
     
         // Create instance of the HelpMenuControl (action) class
-    MainMenuControl mainMenuControl = new MainMenuControl();
+//    MainMenuControl mainMenuControl = new MainMenuControl();
     
     // default constructor
-    public MainMenuView() {
+    public MainMenu() {
         
     } 
     
@@ -90,9 +90,9 @@ public class MainMenuView {
     
     // determines if the command is valid
     private boolean validCommand(String command) {
-        String[][] items = MainMenuView.menuItems;
+        String[][] items = MainMenu.menuItems;
 
-        for (String[] item : MainMenuView.menuItems) {
+        for (String[] item : MainMenu.menuItems) {
             if (item[0].equals(command)) {
                 return true;
             }
@@ -106,7 +106,7 @@ public class MainMenuView {
         System.out.println("       Main Menu");
         System.out.println("-------------------------");
 
-        for (int i = 0; i < MainMenuView.menuItems.length; i++) {
+        for (int i = 0; i < MainMenu.menuItems.length; i++) {
             System.out.println("   " + menuItems[i][0] + "\t" + menuItems[i][1]);
         }
         System.out.println("♠♡♢♣♤♥♦♧♠♡♢♣♤♥♦♧♠♡♢♣♤♥♦♧\n");
