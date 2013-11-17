@@ -11,6 +11,7 @@ package twentyone;
 import java.util.Scanner;
 import static twentyone.TwentyOne.myDeck;
 
+
 /**
 * @author WMitchell
 * @author RFord
@@ -51,7 +52,7 @@ public class MainMenu {
                     GameMenuView myGameMenuView = new GameMenuView();
                     myGameMenuView.getInput();
                     }
-
+                    Dealer myDealer = new Dealer();
                     break;
                 case "2":
                     HelpMenuView myHelpMenuView = new HelpMenuView();
