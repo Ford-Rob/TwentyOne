@@ -24,9 +24,12 @@ public abstract class Menu {
     
 //    private MenuControl MenuControl = new MenuControl();
     
-
+    public Menu() {
+    }
     public Menu(String[][] menuItems) {
-    }  
+        this();
+        this.menuItems = menuItems;
+    }
     protected final void displayMenu(){
 
             while (++counter < 25){
@@ -37,7 +40,7 @@ public abstract class Menu {
                     } else {++SuitNumber;
                     }      
             }                           
-            System.out.println("\n\tGame Menu");
+            System.out.println("\n\t Menu");
             counter = 0;
             while (++counter < 26){
                     border=(char)SuitNumber;
@@ -45,6 +48,7 @@ public abstract class Menu {
  
             }  
             System.out.println("");
+
             for (int i = 0; i < menuItems.length; i++) {
             System.out.println("\t" + menuItems[i][0] + " - " + menuItems[i][1]);
         }
