@@ -10,52 +10,23 @@ import java.util.Scanner;
  * @author WMitchell
  * @author RFord
  */
-public class GameMenuView extends Menu {
-    short SuitNumber = 9824;
-    byte counter = 0;
-    char border;
-    private final static String[][] gameMenuItems = {
+public class GameMenu extends Menu {
+//    short SuitNumber = 9824;
+//    byte counter = 0;
+//    char border;
+    private final static String[][] menuItems = {
     {"H", "Hit"},
     {"S", "Stand"},        
     {"Q", "Quit Game"}        
     };
+    public GameMenu() {
+        super (GameMenu.menuItems);
+    }
     
     private GameMenuControl gameMenuControl = new GameMenuControl();
     
-        public void displayGameMenu(){
 
-            while (++counter < 25){
-                    border=(char)SuitNumber;
-                    System.out.print(border);
-                    if (SuitNumber > 9830) {    
-                        SuitNumber = 9824;
-                    } else {++SuitNumber;
-                    }      
-            }                           
-            System.out.println("\n\tGame Menu");
-            counter = 0;
-            while (++counter < 26){
-                    border=(char)SuitNumber;
-                    System.out.print("-");
- 
-            }  
-            System.out.println("");
-            for (int i = 0; i < GameMenuView.gameMenuItems.length; i++) {
-            System.out.println("\t" + gameMenuItems[i][0] + " - " + gameMenuItems[i][1]);
-        }
-            counter = 0;
-            while (++counter < 25){
-                    border=(char)SuitNumber;
-                    System.out.print(border);
-                    if (SuitNumber > 9830) {    
-                        SuitNumber = 9824;
-                    } else {++SuitNumber;
-                    }  
-            }  
-            counter = 0;
-            System.out.println("\nEnter your choice: ");
-    }
-            // display the help menu and get the end users input selection
+@Override            // display the help menu and get the end users input selection
     public String getInput() {       
         
         String gameStatus = "playing";
@@ -65,7 +36,7 @@ public class GameMenuView extends Menu {
                 System.out.println("21 you win!");
                 return "QUIT";
                 } 
-            displayGameMenu();
+            this.displayMenu();
             
             //get commaned entered
 
@@ -88,8 +59,40 @@ public class GameMenuView extends Menu {
          return gameStatus;
     }
 
-   
+/**   
+        public void displayGameMenu(){
 
+            while (++counter < 25){
+                    border=(char)SuitNumber;
+                    System.out.print(border);
+                    if (SuitNumber > 9830) {    
+                        SuitNumber = 9824;
+                    } else {++SuitNumber;
+                    }      
+            }                           
+            System.out.println("\n\tGame Menu");
+            counter = 0;
+            while (++counter < 26){
+                    border=(char)SuitNumber;
+                    System.out.print("-");
+ 
+            }  
+            System.out.println("");
+            for (int i = 0; i < GameMenu.gameMenuItems.length; i++) {
+            System.out.println("\t" + gameMenuItems[i][0] + " - " + gameMenuItems[i][1]);
+        }
+            counter = 0;
+            while (++counter < 25){
+                    border=(char)SuitNumber;
+                    System.out.print(border);
+                    if (SuitNumber > 9830) {    
+                        SuitNumber = 9824;
+                    } else {++SuitNumber;
+                    }  
+            }  
+            counter = 0;
+            System.out.println("\nEnter your choice: ");
+    }
     
     
     // retrieves the command entered by the end user
@@ -116,13 +119,14 @@ public class GameMenuView extends Menu {
     
     // determines if the command is valid
     private boolean validCommand(String command) {
-        String[][] items = GameMenuView.gameMenuItems;
+        String[][] items = GameMenu.gameMenuItems;
 
-        for (String[] item : GameMenuView.gameMenuItems) {
+        for (String[] item : GameMenu.gameMenuItems) {
             if (item[0].equals(command)) {
                 return true;
             }
         }
         return false;
     }
+    */
 }

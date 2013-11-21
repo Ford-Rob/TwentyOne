@@ -10,7 +10,7 @@ import java.util.Scanner;
  * @author WMitchell
  * @author RFord
  */
-public class HelpMenuView extends Menu {
+public class HelpMenu extends Menu {
     
         private final static String[][] menuItems = {
         {"R", "Rules"},
@@ -22,16 +22,17 @@ public class HelpMenuView extends Menu {
     private HelpMenuControl helpMenuControl = new HelpMenuControl();
     
     // default constructor
-    public HelpMenuView() {
+    public HelpMenu() {
+        super (HelpMenu.menuItems);
         
     } 
-    
+    @Override
     // display the help menu and get the end users input selection
     public String getInput() {       
         
         String gameStatus = "playing";
         do {
-            this.displayHelpMenu();
+            this.displayMenu();
             
             //get commaned entered
             String command = this.getCommand();
@@ -49,7 +50,7 @@ public class HelpMenuView extends Menu {
         
          return gameStatus;
     }
-
+/**
         // displays the help menu
     public final void displayHelpMenu() {
         System.out.println("\n♠♡♢♣♤♥♦♧♠♡♢♣♤♥♦♧♠♡♢♣♤♥♦♧");
@@ -97,5 +98,5 @@ public class HelpMenuView extends Menu {
         }
         return false;
     }
-  
+**/
 }

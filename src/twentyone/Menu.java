@@ -14,21 +14,20 @@ import static twentyone.TwentyOne.myDeck;
 * @author RFord
 */
 
-public class Menu {
+public abstract class Menu {
     short SuitNumber = 9824;
     byte counter = 0;
     char border;
-    private final static String[][] MenuItems = {
-    {"H", "Hit"},
-    {"S", "Stand"},        
-    {"Q", "Quit Game"}        
-    };
+    private  String[][] menuItems = null;
+      
+
     
 //    private MenuControl MenuControl = new MenuControl();
     
 
-    
-            public void displayMenu(){
+    public Menu(String[][] menuItems) {
+    }  
+    protected final void displayMenu(){
 
             while (++counter < 25){
                     border=(char)SuitNumber;
@@ -46,8 +45,8 @@ public class Menu {
  
             }  
             System.out.println("");
-            for (int i = 0; i < Menu.MenuItems.length; i++) {
-            System.out.println("\t" + MenuItems[i][0] + " - " + MenuItems[i][1]);
+            for (int i = 0; i < menuItems.length; i++) {
+            System.out.println("\t" + menuItems[i][0] + " - " + menuItems[i][1]);
         }
             counter = 0;
             while (++counter < 25){
@@ -65,4 +64,41 @@ public class Menu {
                     
              
     }
+    protected final String getCommand() {
+
+        Scanner inFile = new Scanner(System.in);
+        String command;
+        boolean valid = false;
+        do {
+
+            command = inFile.nextLine();
+            command = command.trim().toUpperCase();
+            valid = validCommand(command);
+            if (!valid) {
+                new TwentyOneError().displayError("Invalid command. Please enter a valid command.");
+                continue;
+            }
+                
+        } while (!valid);
+        
+        return command;
+    } 
+    // determines if the command is valid
+    private boolean validCommand(String command) {
+        String[][] items = menuItems;
+
+        for (String[] item : menuItems) {
+            if (item[0].equals(command)) {
+                return true;
+            }
+        }
+        return false;
+    }
+    /**
+     *
+     * @param object
+     * @return
+     */
+    public abstract String getInput();
 }
+

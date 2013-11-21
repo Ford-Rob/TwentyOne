@@ -19,7 +19,7 @@ public class TwentyOne {
         myPlayer.multiPlayer();
         myPlayer.getName();
         MainMenu myMainMenu = new MainMenu();
-        myMainMenu.getInput(myDeck);
+        myMainMenu.getInput();
         }
         /**
         myDeck.initDeck();

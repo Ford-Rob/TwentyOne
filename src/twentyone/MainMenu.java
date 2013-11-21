@@ -18,22 +18,22 @@ import static twentyone.TwentyOne.myDeck;
 */
 public class MainMenu extends Menu {
     
-    public final static String[][] menuItems = {
+    private final static String[][] menuItems = {
         {"1", "Start Game"},
         {"2", "Help"},        
         {"3", "Exit"}        
     };
  
     public MainMenu() {
-        super ();
+        super (MainMenu.menuItems);
         
     } 
-    
-    public String getInput(Object object) {       
+    @Override
+    public String getInput() {       
         
         String gameStatus = Game.PLAYING;
         do {
-            this.displayMainMenu();
+            this.displayMenu();
             // get commaned entered
             String command = this.getCommand();
             switch (command) {
@@ -45,14 +45,14 @@ public class MainMenu extends Menu {
                     TwentyOne.myHand.initHand();
                     TwentyOne.myHand.displayHand();
                     System.out.println("The Value of Your Hand is " + TwentyOne.myHand.checkValue() + "\n");
-                    GameMenuView myGameMenuView = new GameMenuView();
+                    GameMenu myGameMenuView = new GameMenu();
                     myGameMenuView.getInput();
                     }
                     Dealer myDealer = new Dealer();
                     break;
                 case "2":
-                    HelpMenuView myHelpMenuView = new HelpMenuView();
-                    myHelpMenuView.getInput();
+                    HelpMenu myHelpMenu = new HelpMenu();
+                    myHelpMenu.getInput();
 
                     break;
                 case "3":
@@ -64,6 +64,7 @@ public class MainMenu extends Menu {
         return "QUIT";
     }
     
+ /**   
     // retrieves the command entered by the end user
     protected final String getCommand() {
 
@@ -107,7 +108,7 @@ public class MainMenu extends Menu {
             System.out.println("   " + menuItems[i][0] + "\t" + menuItems[i][1]);
         }
         System.out.println("♠♡♢♣♤♥♦♧♠♡♢♣♤♥♦♧♠♡♢♣♤♥♦♧\n");
-    }
+    }*/
         
     
                     
