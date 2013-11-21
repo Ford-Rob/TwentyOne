@@ -25,7 +25,7 @@ public class MainMenu extends Menu {
     };
  
     public MainMenu() {
-        super (MainMenu.menuItems);
+        super ();
         
     } 
     
@@ -97,17 +97,17 @@ public class MainMenu extends Menu {
         return false;
     }
         
-//    public void displayMainMenu(){
-//
-//        System.out.println("\n♠♡♢♣♤♥♦♧♠♡♢♣♤♥♦♧♠♡♢♣♤♥♦♧");
-//        System.out.println("       Main Menu");
-//        System.out.println("-------------------------");
-//
-//        for (int i = 0; i < MainMenu.menuItems.length; i++) {
-//            System.out.println("   " + menuItems[i][0] + "\t" + menuItems[i][1]);
-//        }
-//        System.out.println("♠♡♢♣♤♥♦♧♠♡♢♣♤♥♦♧♠♡♢♣♤♥♦♧\n");
-//    }
+    public void displayMainMenu(){
+
+        System.out.println("\n♠♡♢♣♤♥♦♧♠♡♢♣♤♥♦♧♠♡♢♣♤♥♦♧");
+        System.out.println("       Main Menu");
+        System.out.println("-------------------------");
+
+        for (int i = 0; i < MainMenu.menuItems.length; i++) {
+            System.out.println("   " + menuItems[i][0] + "\t" + menuItems[i][1]);
+        }
+        System.out.println("♠♡♢♣♤♥♦♧♠♡♢♣♤♥♦♧♠♡♢♣♤♥♦♧\n");
+    }
         
     
                     

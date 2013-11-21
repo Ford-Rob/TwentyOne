@@ -14,7 +14,7 @@ import static twentyone.TwentyOne.myDeck;
 * @author RFord
 */
 
-public class MenuView {
+public class Menu {
     short SuitNumber = 9824;
     byte counter = 0;
     char border;
@@ -24,9 +24,9 @@ public class MenuView {
     {"Q", "Quit Game"}        
     };
     
-    private MenuControl MenuControl = new MenuControl();
+//    private MenuControl MenuControl = new MenuControl();
     
-public class Menu {
+
     
             public void displayMenu(){
 
@@ -46,7 +46,7 @@ public class Menu {
  
             }  
             System.out.println("");
-            for (int i = 0; i < MenuView.MenuItems.length; i++) {
+            for (int i = 0; i < Menu.MenuItems.length; i++) {
             System.out.println("\t" + MenuItems[i][0] + " - " + MenuItems[i][1]);
         }
             counter = 0;
@@ -65,3 +65,4 @@ public class Menu {
                     
              
     }
+}
