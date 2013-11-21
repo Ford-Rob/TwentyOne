@@ -10,7 +10,7 @@ import java.util.Scanner;
  * @author WMitchell
  * @author RFord
  */
-public class HelpMenuView {
+public class HelpMenuView extends Menu {
     
         private final static String[][] menuItems = {
         {"R", "Rules"},

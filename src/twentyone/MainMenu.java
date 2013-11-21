@@ -1,7 +1,7 @@
 /*
 * This will be the Main Menu for the game.
 * 
-* 10/19/13 Rebuilt and split class for individual Week 4 assignment. -WM
+* 11/16/13 -WM
 * 
 * Assigned to WMitchell.
 */
@@ -16,20 +16,16 @@ import static twentyone.TwentyOne.myDeck;
 * @author WMitchell
 * @author RFord
 */
-public class MainMenu {
+public class MainMenu extends Menu {
     
-    private final static String[][] menuItems = {
+    public final static String[][] menuItems = {
         {"1", "Start Game"},
         {"2", "Help"},        
         {"3", "Exit"}        
     };
-    
-    
-        // Create instance of the HelpMenuControl (action) class
-//    MainMenuControl mainMenuControl = new MainMenuControl();
-    
-    // default constructor
+ 
     public MainMenu() {
+        super (MainMenu.menuItems);
         
     } 
     
@@ -101,17 +97,17 @@ public class MainMenu {
         return false;
     }
         
-    public void displayMainMenu(){
-
-        System.out.println("\n♠♡♢♣♤♥♦♧♠♡♢♣♤♥♦♧♠♡♢♣♤♥♦♧");
-        System.out.println("       Main Menu");
-        System.out.println("-------------------------");
-
-        for (int i = 0; i < MainMenu.menuItems.length; i++) {
-            System.out.println("   " + menuItems[i][0] + "\t" + menuItems[i][1]);
-        }
-        System.out.println("♠♡♢♣♤♥♦♧♠♡♢♣♤♥♦♧♠♡♢♣♤♥♦♧\n");
-    }
+//    public void displayMainMenu(){
+//
+//        System.out.println("\n♠♡♢♣♤♥♦♧♠♡♢♣♤♥♦♧♠♡♢♣♤♥♦♧");
+//        System.out.println("       Main Menu");
+//        System.out.println("-------------------------");
+//
+//        for (int i = 0; i < MainMenu.menuItems.length; i++) {
+//            System.out.println("   " + menuItems[i][0] + "\t" + menuItems[i][1]);
+//        }
+//        System.out.println("♠♡♢♣♤♥♦♧♠♡♢♣♤♥♦♧♠♡♢♣♤♥♦♧\n");
+//    }
         
     
                     

@@ -1,8 +1,4 @@
-/*
- * This will hold the Player information for the Player and the Dealer. 
- * 
- * 10/14 See MainMenu class. I was able to move all of the Player code from the 
- * TwentyOne class to here. 
+/* 
  * 
  * Assigned to WMitchell.
  */

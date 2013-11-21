@@ -10,7 +10,7 @@ import java.util.Scanner;
  * @author WMitchell
  * @author RFord
  */
-public class GameMenuView {
+public class GameMenuView extends Menu {
     short SuitNumber = 9824;
     byte counter = 0;
     char border;
