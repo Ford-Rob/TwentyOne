@@ -8,6 +8,7 @@ package robandwade.cit260.twentyone.menus;
 import java.util.Scanner;
 import twentyone.TwentyOneError;
 import static twentyone.TwentyOne.myDeck;
+import robandwade.cit260.twentyone.interfaces.DisplayInfo;
 
 
 /**
@@ -15,7 +16,7 @@ import static twentyone.TwentyOne.myDeck;
 * @author RFord
 */
 
-public abstract class Menu {
+public abstract class Menu implements DisplayInfo{
     short SuitNumber = 9824;
     byte counter = 0;
     char border;
@@ -31,7 +32,7 @@ public abstract class Menu {
         this();
         this.menuItems = menuItems;
     }
-    protected final void displayMenu(){
+    public void displayMenu(){
 
             while (++counter < 25){
                     border=(char)SuitNumber;
@@ -69,7 +70,7 @@ public abstract class Menu {
                     
              
     }
-    protected final String getCommand() {
+    public String getCommand() {
 
         Scanner inFile = new Scanner(System.in);
         String command;
