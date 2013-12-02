@@ -12,7 +12,7 @@ import java.util.Scanner;
  */
 public class Player {
     static String[] playerName = new String[0];
-    int numberofPlayers = 0; 
+    public int numberofPlayers = 0; 
     int kbdInput;
     String stringInput;
     static Scanner input = new Scanner(System.in);
@@ -28,7 +28,7 @@ public class Player {
             System.out.println("\nWelcome " + playerName[i] + "\n");
         }
     }           
-    
+
     public void multiPlayer() {
         while(numberofPlayers == 0) {
             

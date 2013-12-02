@@ -3,9 +3,10 @@
 * 
 */
 
-package twentyone;  
+package robandwade.cit260.twentyone.menus;  
 
 import java.util.Scanner;
+import twentyone.TwentyOneError;
 import static twentyone.TwentyOne.myDeck;
 
 

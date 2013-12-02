@@ -2,9 +2,10 @@
  * This will display the Help Menu. 
  * 
  */
-package twentyone;
+package robandwade.cit260.twentyone.menus;
 
 import java.util.Scanner;
+import twentyone.HelpMenuControl;
 
 /**
  * @author WMitchell

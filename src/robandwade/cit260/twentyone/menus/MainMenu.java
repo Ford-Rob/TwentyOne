@@ -6,11 +6,14 @@
 * Assigned to WMitchell.
 */
 
-package twentyone;  
+package robandwade.cit260.twentyone.menus;  
 
 import java.util.Scanner;
+import twentyone.Dealer;
+import twentyone.Game;
+import twentyone.TwentyOne;
 import static twentyone.TwentyOne.myDeck;
-
+import twentyone.Player;
 
 /**
 * @author WMitchell
@@ -38,6 +41,7 @@ public class MainMenu extends Menu {
             String command = this.getCommand();
             switch (command) {
                 case "1":
+
                     for (int i = 0; i< TwentyOne.myPlayer.numberofPlayers; i++ ){
                     myDeck.initDeck();
                     myDeck.shuffleDeck();

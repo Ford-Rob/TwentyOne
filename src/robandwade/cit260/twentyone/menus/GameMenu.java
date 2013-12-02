@@ -2,9 +2,11 @@
  * This will set up the game menu 
  * assigned to RFord - check
  */
-package twentyone;
+package robandwade.cit260.twentyone.menus;
 
 import java.util.Scanner;
+import twentyone.GameMenuControl;
+import twentyone.TwentyOne;
 
 /**
  * @author WMitchell
