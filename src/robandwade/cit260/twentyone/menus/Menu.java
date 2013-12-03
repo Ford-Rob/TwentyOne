@@ -9,14 +9,14 @@ import java.util.Scanner;
 import twentyone.TwentyOneError;
 import static twentyone.TwentyOne.myDeck;
 import robandwade.cit260.twentyone.interfaces.DisplayInfo;
-
+import robandwade.cit260.twentyone.interfaces.EnterInfo;
 
 /**
 * @author WMitchell
 * @author RFord
 */
 
-public abstract class Menu implements DisplayInfo{
+public abstract class Menu implements DisplayInfo, EnterInfo {
     short SuitNumber = 9824;
     byte counter = 0;
     char border;

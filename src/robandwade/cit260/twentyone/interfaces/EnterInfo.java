@@ -8,7 +8,6 @@ package robandwade.cit260.twentyone.interfaces;
  *
  * @author RFord
  */
-public interface DisplayInfo {
-    void displayMenu(); // This function displays the menu
-
+public interface EnterInfo {
+    String getCommand(); // This function scans for the menu choice    
 }

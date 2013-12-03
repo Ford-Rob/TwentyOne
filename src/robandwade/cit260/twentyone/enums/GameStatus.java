@@ -13,4 +13,7 @@ public enum GameStatus {
     Lose,
     Bust,
     Push,
+    Playing,
+    Quit,
+    
 }
