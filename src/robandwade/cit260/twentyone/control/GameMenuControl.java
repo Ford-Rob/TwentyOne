@@ -2,7 +2,9 @@
  * Controls for the Game Menu 10/18/13 RFord
  * 
  */
-package twentyone;
+package robandwade.cit260.twentyone.control;
+
+import twentyone.TwentyOne;
 
 /**
  *

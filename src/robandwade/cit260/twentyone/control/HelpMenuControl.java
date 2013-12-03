@@ -2,7 +2,7 @@
  * Controls the Help Menu. 
  * 
  */
-package twentyone;
+package robandwade.cit260.twentyone.control;
 
 /**
  * @author WMitchell

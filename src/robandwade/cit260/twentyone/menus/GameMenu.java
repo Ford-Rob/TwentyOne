@@ -5,7 +5,7 @@
 package robandwade.cit260.twentyone.menus;
 
 import java.util.Scanner;
-import twentyone.GameMenuControl;
+import robandwade.cit260.twentyone.control.GameMenuControl;
 import twentyone.TwentyOne;
 
 /**
