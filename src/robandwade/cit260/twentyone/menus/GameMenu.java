@@ -6,13 +6,14 @@ package robandwade.cit260.twentyone.menus;
 
 import java.util.Scanner;
 import robandwade.cit260.twentyone.control.GameMenuControl;
+import robandwade.cit260.twentyone.interfaces.ShowHelp;
 import twentyone.TwentyOne;
 
 /**
  * @author WMitchell
  * @author RFord
  */
-public class GameMenu extends Menu {
+public class GameMenu extends Menu implements ShowHelp {
 //    short SuitNumber = 9824;
 //    byte counter = 0;
 //    char border;
@@ -59,6 +60,11 @@ public class GameMenu extends Menu {
         } while (!gameStatus.equals("QUIT"));  
         
          return gameStatus;
+    }
+
+    @Override
+    public void HelpMenu() {
+        throw new UnsupportedOperationException("Not supported yet."); //WM - L10 Individual Assignment interface
     }
 
 /**   
