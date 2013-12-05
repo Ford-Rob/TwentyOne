@@ -32,8 +32,10 @@ public class GameMenu extends Menu implements ShowHelp {
 @Override            // display the help menu and get the end users input selection
     public String getInput() {       
         
+        
         String gameStatus = "playing";
         do {
+        
             int check = TwentyOne.myHand.checkValue();
             if (check == 21) {
                 System.out.println("21 you win!");
@@ -42,8 +44,9 @@ public class GameMenu extends Menu implements ShowHelp {
             this.displayMenu();
             
             //get commaned entered
-
+            
             String command = getCommand();
+            try{
             switch (command) {
                 case "H":
                     gameMenuControl.hit();
@@ -57,6 +60,11 @@ public class GameMenu extends Menu implements ShowHelp {
                 case "Q": 
                     return "QUIT";
             }
+            }
+            catch (Exception e){
+                    System.out.println ("Please Enter an H, S, or Q");
+                    }
+            
         } while (!gameStatus.equals("QUIT"));  
         
          return gameStatus;

@@ -81,7 +81,7 @@ public abstract class Menu implements DisplayInfo, EnterInfo {
             command = command.trim().toUpperCase();
             valid = validCommand(command);
             if (!valid) {
-                new TwentyOneError().displayError("Invalid command. Please enter a valid command.");
+                new TwentyOneError().displayError("Please enter a valid command.");
                 continue;
             }
                 
