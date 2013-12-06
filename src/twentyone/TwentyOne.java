@@ -15,14 +15,19 @@ public class TwentyOne {
     public static int currentPlayer;
 
     
-    public static void main(String[] args) {
+    public static void main(String[] args)  {
         TwentyOne myGame = new TwentyOne();
         System.out.println("\n" + "Welcome to 21.");
         myPlayer.multiPlayer();
         myPlayer.getName();
         MainMenu myMainMenu = new MainMenu();
-        myMainMenu.getInput();
-        }
+        try {
+            myMainMenu.getInput();
+        
+        }catch (MenuException e) {
+                System.out.println("\n\t" + e.getMessage());
+    }
+}
         /**
         myDeck.initDeck();
         myDeck.shuffleDeck();

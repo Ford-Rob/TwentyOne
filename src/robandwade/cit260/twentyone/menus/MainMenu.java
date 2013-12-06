@@ -9,11 +9,13 @@
 package robandwade.cit260.twentyone.menus;  
 
 import java.util.Scanner;
+
 import twentyone.Dealer;
 import twentyone.Game;
 import twentyone.TwentyOne;
 import static twentyone.TwentyOne.myDeck;
 import twentyone.Player;
+import robandwade.cit260.twentyone.exceptions.MenuException;
 
 /**
 * @author WMitchell
@@ -32,13 +34,14 @@ public class MainMenu extends Menu {
         
     } 
     @Override
-    public String getInput() {       
+    public String getInput() throws MenuException {       
         
         String gameStatus = Game.PLAYING;
         do {
             this.displayMenu();
             // get commaned entered
             String command = this.getCommand();
+        try {
             switch (command) {
                 case "1":
 
@@ -62,8 +65,13 @@ public class MainMenu extends Menu {
                 case "3":
 
                     return "QUIT";
-            }
-        } while (!gameStatus.equals("QUIT"));
+                default: throw  new MenuException("invalid input: " + command);
+            } 
+        } catch (MenuException tex) {
+                System.out.println("\n\t" + tex.getMessage());
+}
+        } 
+        while (!gameStatus.equals("QUIT"));
         TwentyOne.currentPlayer ++;
         return "QUIT";
     }

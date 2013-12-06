@@ -10,6 +10,7 @@ import twentyone.TwentyOneError;
 import static twentyone.TwentyOne.myDeck;
 import robandwade.cit260.twentyone.interfaces.DisplayInfo;
 import robandwade.cit260.twentyone.interfaces.EnterInfo;
+import robandwade.cit260.twentyone.exceptions.MenuException;
 
 /**
 * @author WMitchell
@@ -70,41 +71,31 @@ public abstract class Menu implements DisplayInfo, EnterInfo {
                     
              
     }
+
     public String getCommand() {
 
-        Scanner inFile = new Scanner(System.in);
-        String command;
-        boolean valid = false;
-        do {
-
+        try {
+            Scanner inFile = new Scanner(System.in);
+            String command;
             command = inFile.nextLine();
             command = command.trim().toUpperCase();
-            valid = validCommand(command);
-            if (!valid) {
-                new TwentyOneError().displayError("Please enter a valid command.");
-                continue;
+            String[][] items = menuItems;
+            for (String[] item : menuItems) {
+                if (item[0].equals(command)) {
+                    return command;
+                }
             }
-                
-        } while (!valid);
-        
-        return command;
-    } 
-    // determines if the command is valid
-    private boolean validCommand(String command) {
-        String[][] items = menuItems;
-
-        for (String[] item : menuItems) {
-            if (item[0].equals(command)) {
-                return true;
-            }
-        }
-        return false;
+            throw new MenuException("invalid input: " + command);
+        }  catch (MenuException e){
+            System.out.println("\nPlease enter a valid option: ");            
+            return getCommand();
+        }          
     }
     /**
      *
      * @param object
      * @return
      */
-    public abstract String getInput();
+    public abstract String getInput() throws MenuException;
 }
 
