@@ -89,7 +89,7 @@ public abstract class Menu implements DisplayInfo, EnterInfo {
         }  catch (MenuException e){
             System.out.println("\nPlease enter a valid option: ");            
             return getCommand();
-        }          
+        }    
     }
     /**
      *

@@ -16,17 +16,18 @@ public class TwentyOne {
 
     
     public static void main(String[] args)  {
-        TwentyOne myGame = new TwentyOne();
-        System.out.println("\n" + "Welcome to 21.");
-        myPlayer.multiPlayer();
-        myPlayer.getName();
-        MainMenu myMainMenu = new MainMenu();
         try {
-            myMainMenu.getInput();
-        
-        }catch (MenuException e) {
+            TwentyOne myGame = new TwentyOne();
+            System.out.println("\n" + "Welcome to 21.");
+            myPlayer.multiPlayer();
+            myPlayer.getName();
+            MainMenu myMainMenu = new MainMenu();      
+            myMainMenu.getInput();      
+        } catch (MenuException e) {
                 System.out.println("\n\t" + e.getMessage());
-    }
+        } finally {
+                System.out.println("\n\tGame Over");        
+        }
 }
         /**
         myDeck.initDeck();
