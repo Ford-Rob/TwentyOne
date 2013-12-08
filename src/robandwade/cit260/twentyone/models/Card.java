@@ -1,7 +1,7 @@
 /* Modified 10/18/2013 to work better with the hand class.
  *
  */
-package twentyone;
+package robandwade.cit260.twentyone.models;
 
 /**
  * @author WMitchell

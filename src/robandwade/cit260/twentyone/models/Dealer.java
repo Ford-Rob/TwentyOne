@@ -2,19 +2,20 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package twentyone;
+package robandwade.cit260.twentyone.models;
 
-/**
+
+import twentyone.TwentyOne;
+/*
  *
  * @author RFord
  */
-import static twentyone.TwentyOne.myDeck;
+
 
 public class Dealer {
 
     public Dealer() {
-        myDeck.initDeck();
-        myDeck.shuffleDeck();
+
         System.out.println("Dealer's Turn");
         TwentyOne.myHand.initHand();
         TwentyOne.myHand.displayHand();

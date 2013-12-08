@@ -10,11 +10,9 @@ package robandwade.cit260.twentyone.menus;
 
 import java.util.Scanner;
 
-import twentyone.Dealer;
+import robandwade.cit260.twentyone.models.Dealer;
 import twentyone.Game;
 import twentyone.TwentyOne;
-import static twentyone.TwentyOne.myDeck;
-import twentyone.Player;
 import robandwade.cit260.twentyone.exceptions.MenuException;
 
 /**
@@ -44,18 +42,9 @@ public class MainMenu extends Menu {
         try {
             switch (command) {
                 case "1":
-
-                    for (int i = 0; i< TwentyOne.myPlayer.numberofPlayers; i++ ){
-                    myDeck.initDeck();
-                    myDeck.shuffleDeck();
-                    System.out.println(TwentyOne.myPlayer.currentPlayer(i) + "'s Turn");
-                    TwentyOne.myHand.initHand();
-                    TwentyOne.myHand.displayHand();
-                    System.out.println("The Value of Your Hand is " + TwentyOne.myHand.checkValue() + "\n");
-                    GameMenu myGameMenuView = new GameMenu();
-                    myGameMenuView.getInput();
-                    }
-                    Dealer myDealer = new Dealer();
+                    GameMenu myGameMenu = new GameMenu();
+                    myGameMenu.displayMenu();
+                    myGameMenu.getInput();
                     break;
                 case "2":
                     HelpMenu myHelpMenu = new HelpMenu();

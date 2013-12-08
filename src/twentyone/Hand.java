@@ -4,6 +4,8 @@
  */
 package twentyone;
 
+import robandwade.cit260.twentyone.models.Card;
+
 /**
  *
  * @author RFord

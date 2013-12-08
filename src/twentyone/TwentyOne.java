@@ -1,5 +1,6 @@
 package twentyone;
 
+import robandwade.cit260.twentyone.models.Deck;
 import robandwade.cit260.twentyone.menus.MainMenu;
 import static twentyone.Player.playerName;
 import robandwade.cit260.twentyone.exceptions.MenuException;

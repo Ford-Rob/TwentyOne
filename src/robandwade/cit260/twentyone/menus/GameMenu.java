@@ -18,6 +18,7 @@ public class GameMenu extends Menu implements ShowHelp {
 //    byte counter = 0;
 //    char border;
     private final static String[][] menuItems = {
+    {"D", "Deal"},
     {"H", "Hit"},
     {"S", "Stand"},        
     {"Q", "Quit Game"}        
@@ -33,22 +34,21 @@ public class GameMenu extends Menu implements ShowHelp {
     public String getInput() {       
         
         
-        String gameStatus = "playing";
+        String gameStatus = "waiting";
         do {
-        
-            int check = TwentyOne.myHand.checkValue();
-            if (check == 21) {
-                System.out.println("21 you win!");
-                return "QUIT";
-                } 
-            this.displayMenu();
-            
+
             //get commaned entered
             
             String command = getCommand();
             try{
             switch (command) {
+                case "D":
+                    gameMenuControl.deal();
+                    return "PLAYING";
                 case "H":
+                    if (!gameStatus.equals("waiting")) 
+                    System.out.println ("You can't Hit if there is no active game"); 
+                    else 
                     gameMenuControl.hit();
                     if (TwentyOne.myHand.checkValue() >= 21) {
                         return "QUIT";
@@ -62,7 +62,7 @@ public class GameMenu extends Menu implements ShowHelp {
             }
             }
             catch (Exception e){
-                    System.out.println ("Please Enter an H, S, or Q");
+                    System.out.println ("Please Enter a D, H, S, or Q");
                     }
             
         } while (!gameStatus.equals("QUIT"));  
