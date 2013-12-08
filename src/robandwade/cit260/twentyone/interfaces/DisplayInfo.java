@@ -10,5 +10,7 @@ package robandwade.cit260.twentyone.interfaces;
  */
 public interface DisplayInfo {
     void displayMenu(); // This function displays the menu
+    
+
 
 }

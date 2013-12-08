@@ -4,13 +4,12 @@
  */
 package robandwade.cit260.twentyone.models;
 
-
-
+import robandwade.cit260.twentyone.interfaces.ShowDeck;
 /**
  * 
  * @author RFord 
  */
-public class Deck {
+public class Deck implements ShowDeck{
     int[][] deck = new int[4][13];
 
     public void initDeck(){
