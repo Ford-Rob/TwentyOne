@@ -53,6 +53,7 @@ public class Hand {
         return handValue;    
     }
     public void displayResults() {
+        if (Hand[2] > 21) {Hand[2] = 0;}
         for (int i = 0; i< TwentyOne.myPlayer.numberofPlayers; i++ ){
             if (Hand[i] > 21){
                 System.out.println("I am sorry "+twentyone.Player.playerName[i] + ", you have lost.");
@@ -60,7 +61,7 @@ public class Hand {
                 System.out.println("I am sorry "+twentyone.Player.playerName[i] + ", you have lost.");
             } else if (Hand[i] > Hand[2]){
                 System.out.println("Congratulations "+twentyone.Player.playerName[i] + "! You have won.");
-            } else if (Hand[i] > Hand[2]){
+            } else if (Hand[i] == Hand[2]){
                 System.out.println(twentyone.Player.playerName[i] + "pushes.");
             }
         }
