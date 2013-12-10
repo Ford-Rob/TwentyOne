@@ -42,9 +42,8 @@ public class MainMenu extends Menu {
         try {
             switch (command) {
                 case "1":
-                    GameMenu myGameMenu = new GameMenu();
-                    myGameMenu.displayMenu();
-                    myGameMenu.getInput();
+                    Game myGame = new Game();
+                    myGame.playGame();
                     break;
                 case "2":
                     HelpMenu myHelpMenu = new HelpMenu();

@@ -30,7 +30,9 @@ public class Dealer {
                 TwentyOne.myHand.addCard();
                 TwentyOne.myHand.displayHand();
                 System.out.println("Dealer Shows " + TwentyOne.myHand.checkValue());
-                
+                if (TwentyOne.myHand.checkValue() > 21) {
+                    System.out.println("Dealer Busts ");
+                }             
             }
     }
 }

@@ -18,10 +18,10 @@ public class GameMenu extends Menu implements ShowHelp {
 //    byte counter = 0;
 //    char border;
     private final static String[][] menuItems = {
-    {"D", "Deal"},
+
     {"H", "Hit"},
     {"S", "Stand"},        
-    {"Q", "Quit Game"}        
+       
     };
     public GameMenu() {
         super (GameMenu.menuItems);
@@ -36,35 +36,35 @@ public class GameMenu extends Menu implements ShowHelp {
         
         String gameStatus = "waiting";
         do {
-
+            if (TwentyOne.myHand.checkValue() == 21){
+                return "QUIT";
+            }
             //get commaned entered
             
             String command = getCommand();
             try{
             switch (command) {
-                case "D":
-                    gameMenuControl.deal();
-                    return "PLAYING";
                 case "H":
-                    if (!gameStatus.equals("waiting")) 
-                    System.out.println ("You can't Hit if there is no active game"); 
-                    else 
                     gameMenuControl.hit();
-                    if (TwentyOne.myHand.checkValue() >= 21) {
+                  
+                    if (TwentyOne.myHand.checkValue() > 21){
+                    System.out.println ("You have Busted!");                        
                         return "QUIT";
-                    }
+                    } else if (TwentyOne.myHand.checkValue() == 21){
+                    System.out.println ("Player has 21!");                        
+                        return "QUIT";
+                    } 
+                    displayMenu();  
                     break;
                 case "S":
                     gameMenuControl.stand();
                     return "QUIT";
-                case "Q": 
-                    return "QUIT";
             }
             }
             catch (Exception e){
-                    System.out.println ("Please Enter a D, H, S, or Q");
+                    System.out.println ("Please Enter H or S");
                     }
-            
+
         } while (!gameStatus.equals("QUIT"));  
         
          return gameStatus;

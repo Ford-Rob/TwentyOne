@@ -5,7 +5,7 @@
 package twentyone;
 
 import robandwade.cit260.twentyone.models.Card;
-
+import twentyone.TwentyOne;
 /**
  *
  * @author RFord
@@ -13,6 +13,7 @@ import robandwade.cit260.twentyone.models.Card;
 public class Hand {
     int place = 2;
      Card[] hand = new Card[5];
+     int[] Hand = {0,0,0};
      
         
      public Hand(){
@@ -34,8 +35,7 @@ public class Hand {
         for (int i = 0; i < place; i++){
             handValue += hand[i].getCardValue();
         }
-        return handValue;
-        
+        return handValue;    
     }
     
     public void displayHand(){
@@ -44,5 +44,25 @@ public class Hand {
         }
         System.out.println("");
     }
-
+    public int recordValue(int player){
+        int handValue = 0;
+        for (int i = 0; i < place; i++){
+            handValue += hand[i].getCardValue();
+        }
+        Hand[player] = handValue;
+        return handValue;    
+    }
+    public void displayResults() {
+        for (int i = 0; i< TwentyOne.myPlayer.numberofPlayers; i++ ){
+            if (Hand[i] > 21){
+                System.out.println("I am sorry "+twentyone.Player.playerName[i] + ", you have lost.");
+            } else if (Hand[i] < Hand[2]){
+                System.out.println("I am sorry "+twentyone.Player.playerName[i] + ", you have lost.");
+            } else if (Hand[i] > Hand[2]){
+                System.out.println("Congratulations "+twentyone.Player.playerName[i] + "! You have won.");
+            } else if (Hand[i] > Hand[2]){
+                System.out.println(twentyone.Player.playerName[i] + "pushes.");
+            }
+        }
+}
 }
