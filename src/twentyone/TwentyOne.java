@@ -4,6 +4,9 @@ import robandwade.cit260.twentyone.models.Deck;
 import robandwade.cit260.twentyone.menus.MainMenu;
 import static twentyone.Player.playerName;
 import robandwade.cit260.twentyone.exceptions.MenuException;
+import robandwade.cit260.twentyone.frames.MainFrame;
+import robandwade.cit260.twentyone.enums.ErrorType;
+
 
 /**
  * @author WMitchell
@@ -14,8 +17,32 @@ public class TwentyOne {
     public static Player myPlayer = new Player();
     public static Deck myDeck = new Deck();
     public static int currentPlayer;
+    public static MainFrame mainFrame = null;
 
-    
+public static void main(String[] args)  {
+    TwentyOne twentyOne = null;
+    try {
+              /* Create and display the form */
+            java.awt.EventQueue.invokeLater(new Runnable() {
+                public void run() {
+                    TwentyOne.mainFrame = new MainFrame();
+                    TwentyOne.mainFrame.setVisible(true);
+                }
+            });
+        }  
+
+        catch (Throwable ex) {     
+            ErrorType.displayErorrMsg("Unexpected error: " + ex.getMessage());
+            ErrorType.displayErorrMsg(ex.getStackTrace().toString());           
+        } 
+        finally {
+            if (TwentyOne.mainFrame != null) {
+                TwentyOne.mainFrame.dispose();
+            }
+        }
+}    
+   
+/*
     public static void main(String[] args)  {
         try {
             TwentyOne myGame = new TwentyOne();

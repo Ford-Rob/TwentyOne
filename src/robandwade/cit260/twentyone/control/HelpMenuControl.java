@@ -4,10 +4,48 @@
  */
 package robandwade.cit260.twentyone.control;
 
+
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+
+import robandwade.cit260.twentyone.enums.ErrorType;
+import robandwade.cit260.twentyone.enums.HelpType;
+import static robandwade.cit260.twentyone.enums.HelpType.INSTRUCTIONS;
+import robandwade.cit260.twentyone.exceptions.TwentyOneException;
+
+
+
+
+/**
+ *
+
+ */
+public class HelpMenuControl {
+    
+    public String getHelpText(HelpType command) throws TwentyOneException {
+        String helpText = "";
+        switch (command) {
+            case INSTRUCTIONS:
+            case RULES:
+
+                helpText = command.getHelpText();
+                break;
+            default:
+                throw new TwentyOneException(ErrorType.ERROR105.getMessage());
+        }
+
+        return helpText;
+    }
+    
+}
+
 /**
  * @author WMitchell
  * @author RFord
- */
+
 public class HelpMenuControl {               
     
         public void displayHelpRules() {
@@ -40,3 +78,4 @@ public class HelpMenuControl {
 
 }
 
+ */

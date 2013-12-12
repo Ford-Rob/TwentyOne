@@ -5,18 +5,37 @@
  */
 
 package robandwade.cit260.twentyone.frames;
-
+import robandwade.cit260.twentyone.control.HelpMenuControl;
+import robandwade.cit260.twentyone.enums.HelpType;
+import robandwade.cit260.twentyone.exceptions.TwentyOneException;
 /**
  *
  * @author Wade
  */
-public class MainFrame extends javax.swing.JFrame {
+public class HelpFrame extends javax.swing.JFrame {
+        HelpMenuControl helpCommands = new HelpMenuControl();
 
     /**
      * Creates new form MainFrame
      */
-    public MainFrame() {
+    public HelpFrame() {
         initComponents();
+        setLocationRelativeTo(null);
+    }
+    public HelpMenuControl getHelpCommands() {
+        return helpCommands;
+    }
+    
+        
+    
+    private void displayHelpText(HelpType command) {
+        try {
+            String helpText = this.helpCommands.getHelpText(command);
+            this.jtHelpText.setText(helpText);
+        } catch (TwentyOneException ex) {
+            this.jtHelpText.setText(ex.getMessage());
+        }
+        
     }
 
     /**
@@ -32,11 +51,11 @@ public class MainFrame extends javax.swing.JFrame {
         jpTitle = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jpMenuItems = new javax.swing.JPanel();
-        jbStart = new javax.swing.JButton();
-        jbHelp = new javax.swing.JButton();
+        jbRules = new javax.swing.JButton();
+        jbInstructions = new javax.swing.JButton();
         jbExit = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jtWelcome = new javax.swing.JTextArea();
+        jtHelpText = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -46,7 +65,7 @@ public class MainFrame extends javax.swing.JFrame {
         jpTitle.setBackground(new java.awt.Color(204, 204, 255));
 
         jLabel1.setFont(new java.awt.Font("Bookman Old Style", 0, 21)); // NOI18N
-        jLabel1.setText("Twenty One");
+        jLabel1.setText("Twenty One - Help");
 
         javax.swing.GroupLayout jpTitleLayout = new javax.swing.GroupLayout(jpTitle);
         jpTitle.setLayout(jpTitleLayout);
@@ -67,12 +86,17 @@ public class MainFrame extends javax.swing.JFrame {
 
         jpMenuItems.setBackground(new java.awt.Color(204, 204, 255));
 
-        jbStart.setText("Start");
-
-        jbHelp.setText("Help");
-        jbHelp.addActionListener(new java.awt.event.ActionListener() {
+        jbRules.setText("Rules");
+        jbRules.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbHelpActionPerformed(evt);
+                jbRulesActionPerformed(evt);
+            }
+        });
+
+        jbInstructions.setText("Instructions");
+        jbInstructions.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbInstructionsActionPerformed(evt);
             }
         });
 
@@ -90,8 +114,8 @@ public class MainFrame extends javax.swing.JFrame {
             .addGroup(jpMenuItemsLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jpMenuItemsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jbStart, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jbHelp, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jbRules, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jbInstructions, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jbExit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(17, Short.MAX_VALUE))
         );
@@ -99,21 +123,21 @@ public class MainFrame extends javax.swing.JFrame {
             jpMenuItemsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpMenuItemsLayout.createSequentialGroup()
                 .addContainerGap(14, Short.MAX_VALUE)
-                .addComponent(jbStart, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jbRules, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jbHelp, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jbInstructions, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jbExit)
                 .addGap(22, 22, 22))
         );
 
-        jtWelcome.setColumns(20);
-        jtWelcome.setLineWrap(true);
-        jtWelcome.setRows(5);
-        jtWelcome.setText("Welcome to 21.");
-        jtWelcome.setToolTipText("");
-        jtWelcome.setWrapStyleWord(true);
-        jScrollPane1.setViewportView(jtWelcome);
+        jtHelpText.setColumns(20);
+        jtHelpText.setLineWrap(true);
+        jtHelpText.setRows(5);
+        jtHelpText.setText("Select an item for help.");
+        jtHelpText.setToolTipText("");
+        jtHelpText.setWrapStyleWord(true);
+        jScrollPane1.setViewportView(jtHelpText);
 
         javax.swing.GroupLayout jpBodyLayout = new javax.swing.GroupLayout(jpBody);
         jpBody.setLayout(jpBodyLayout);
@@ -126,7 +150,7 @@ public class MainFrame extends javax.swing.JFrame {
                     .addGroup(jpBodyLayout.createSequentialGroup()
                         .addComponent(jpMenuItems, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 213, Short.MAX_VALUE)))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 175, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jpBodyLayout.setVerticalGroup(
@@ -165,11 +189,15 @@ public class MainFrame extends javax.swing.JFrame {
         this.dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_jbExitActionPerformed
 
-    private void jbHelpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbHelpActionPerformed
-        HelpFrame helpFrame = new HelpFrame();
-        helpFrame.setVisible(true);        // TODO add your handling code here:
-    }//GEN-LAST:event_jbHelpActionPerformed
+    private void jbRulesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbRulesActionPerformed
+        displayHelpText(HelpType.RULES); 
+    }//GEN-LAST:event_jbRulesActionPerformed
 
+    private void jbInstructionsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbInstructionsActionPerformed
+        displayHelpText(HelpType.INSTRUCTIONS);         // TODO add your handling code here:
+    }//GEN-LAST:event_jbInstructionsActionPerformed
+
+    
     /**
      * @param args the command line arguments
      */
@@ -209,11 +237,11 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton jbExit;
-    private javax.swing.JButton jbHelp;
-    private javax.swing.JButton jbStart;
+    private javax.swing.JButton jbInstructions;
+    private javax.swing.JButton jbRules;
     private javax.swing.JPanel jpBody;
     private javax.swing.JPanel jpMenuItems;
     private javax.swing.JPanel jpTitle;
-    private javax.swing.JTextArea jtWelcome;
+    private javax.swing.JTextArea jtHelpText;
     // End of variables declaration//GEN-END:variables
 }

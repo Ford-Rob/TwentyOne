@@ -5,7 +5,7 @@
 package robandwade.cit260.twentyone.menus;
 
 import java.util.Scanner;
-import robandwade.cit260.twentyone.control.HelpMenuControl;
+import robandwade.cit260.twentyone.control.HelpMenuControl1;
 
 /**
  * @author WMitchell
@@ -20,7 +20,7 @@ public class HelpMenu extends Menu {
     };
     
     // Create instance of the HelpMenuControl (action) class
-    private HelpMenuControl helpMenuControl = new HelpMenuControl();
+    private HelpMenuControl1 helpMenuControl = new HelpMenuControl1();
     
     // default constructor
     public HelpMenu() {
