@@ -13,6 +13,7 @@ public class Card {
     private char suit;// 9827 Club, 9824 Spade, 9829 Heart, 9830 Diamond
     private int cardValue;
     public String cardDisplay;
+    public String fileName = "";    
     
     public String toString() {
         return cardDisplay;
@@ -22,10 +23,14 @@ public class Card {
         return cardValue;
     }
     
+    public String getFileName() {
+        return fileName;
+    }
     public Card() {
+
         int rndNumber;   //Random Number for generating card values
         rndNumber = (int) (Math.random()*13+1);
-
+        fileName = String.valueOf(rndNumber - 1);
         if (rndNumber == 1) {
             rank = "A";
             cardValue = 11;  //Will change this to a 1 or 11 later
@@ -43,7 +48,7 @@ public class Card {
             cardValue = 10;
         }  
         rndNumber = (int) (Math.random()*4+1);
-
+        fileName = String.valueOf(rndNumber - 1) + fileName;        
         // 9827 Club, 9824 Spade, 9829 Heart, 9830 Diamond
         if (rndNumber == 1) {
             suit = 9824;
@@ -55,5 +60,6 @@ public class Card {
             suit = 9830;
         }
         cardDisplay = this.rank + "" + this.suit;
+
     }
 }

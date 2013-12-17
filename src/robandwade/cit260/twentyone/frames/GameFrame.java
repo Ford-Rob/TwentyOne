@@ -35,10 +35,18 @@ public class GameFrame extends javax.swing.JFrame {
         gamePanel = new javax.swing.JPanel();
         playerPanel = new javax.swing.JPanel();
         playerLabel = new javax.swing.JLabel();
-        pHandLabel = new javax.swing.JLabel();
+        pCard2 = new javax.swing.JLabel();
+        pCard1 = new javax.swing.JLabel();
+        pCard3 = new javax.swing.JLabel();
+        pCard4 = new javax.swing.JLabel();
+        pCard5 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         dealerLabel = new javax.swing.JLabel();
-        dHandLabel = new javax.swing.JLabel();
+        dCard1 = new javax.swing.JLabel();
+        dCard2 = new javax.swing.JLabel();
+        dCard3 = new javax.swing.JLabel();
+        dCard4 = new javax.swing.JLabel();
+        dCard5 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         statusLabel = new javax.swing.JLabel();
         dStatusLabel = new javax.swing.JLabel();
@@ -52,58 +60,96 @@ public class GameFrame extends javax.swing.JFrame {
 
         playerLabel.setText("Player1");
 
-        pHandLabel.setText("Player's Hand");
+        pCard2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/blank.png"))); // NOI18N
+
+        pCard1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/blank.png"))); // NOI18N
+
+        pCard3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/blank.png"))); // NOI18N
+
+        pCard4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/blank.png"))); // NOI18N
+
+        pCard5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/blank.png"))); // NOI18N
 
         javax.swing.GroupLayout playerPanelLayout = new javax.swing.GroupLayout(playerPanel);
         playerPanel.setLayout(playerPanelLayout);
         playerPanelLayout.setHorizontalGroup(
             playerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(playerPanelLayout.createSequentialGroup()
-                .addGroup(playerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(playerPanelLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(playerLabel))
-                    .addGroup(playerPanelLayout.createSequentialGroup()
-                        .addGap(93, 93, 93)
-                        .addComponent(pHandLabel)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(playerLabel)
+                .addGap(149, 149, 149)
+                .addComponent(pCard1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(pCard2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(pCard3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(pCard4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(pCard5)
+                .addContainerGap(29, Short.MAX_VALUE))
         );
         playerPanelLayout.setVerticalGroup(
             playerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(pCard2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(playerPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(playerLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(pHandLabel)
-                .addContainerGap(41, Short.MAX_VALUE))
+                .addGroup(playerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(playerPanelLayout.createSequentialGroup()
+                        .addComponent(playerLabel)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(pCard3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pCard4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pCard5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pCard1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         dealerLabel.setText("Dealer");
 
-        dHandLabel.setText("Dealer's Hand");
+        dCard1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/blank.png"))); // NOI18N
+
+        dCard2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/blank.png"))); // NOI18N
+
+        dCard3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/blank.png"))); // NOI18N
+
+        dCard4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/blank.png"))); // NOI18N
+
+        dCard5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/blank.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(dealerLabel))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(95, 95, 95)
-                        .addComponent(dHandLabel)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(dealerLabel)
+                .addGap(154, 154, 154)
+                .addComponent(dCard2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(dCard1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(dCard3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(dCard4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(dCard5)
+                .addContainerGap(29, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(dCard1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(dCard2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(dealerLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(dHandLabel)
-                .addContainerGap(48, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(dealerLabel)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(dCard3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(dCard4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(dCard5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         statusLabel.setText("Player Status");
@@ -164,22 +210,22 @@ public class GameFrame extends javax.swing.JFrame {
         buttonPanelLayout.setHorizontalGroup(
             buttonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(buttonPanelLayout.createSequentialGroup()
-                .addGap(36, 36, 36)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(hitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(standButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
+                .addGap(12, 12, 12)
                 .addComponent(dealButton)
                 .addContainerGap())
         );
         buttonPanelLayout.setVerticalGroup(
             buttonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, buttonPanelLayout.createSequentialGroup()
+            .addGroup(buttonPanelLayout.createSequentialGroup()
                 .addGap(22, 22, 22)
-                .addGroup(buttonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(buttonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(dealButton, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE)
-                    .addComponent(hitButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(standButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(standButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(hitButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(23, 23, 23))
         );
 
@@ -191,9 +237,9 @@ public class GameFrame extends javax.swing.JFrame {
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(gamePanelLayout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(buttonPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(81, 81, 81))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(buttonPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         gamePanelLayout.setVerticalGroup(
             gamePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -201,7 +247,7 @@ public class GameFrame extends javax.swing.JFrame {
                 .addComponent(playerPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(gamePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(buttonPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -224,7 +270,8 @@ public class GameFrame extends javax.swing.JFrame {
 
     private void hitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hitButtonActionPerformed
         hit();
-        this.pHandLabel.setText(TwentyOne.myHand.returnHand()); 
+        displayPlayerCards();
+
         playerScore = TwentyOne.myHand.checkValue(); 
         System.out.println("playerScore: "+ playerScore + "\tdealerScore: "+ dealerScore);
         if (TwentyOne.myHand.checkValue() > 21){
@@ -251,16 +298,19 @@ public class GameFrame extends javax.swing.JFrame {
           this.statusLabel.setText("Shuffling");
           this.gStatusLabel.setText("");
           this.dStatusLabel.setText("");
-          this.dHandLabel.setText("");
-          this.pHandLabel.setText("");
+          resetCards();
+
+
           hitButton.setEnabled(true);
           standButton.setEnabled(true);
           dealButton.setEnabled(false);
             TwentyOne.myHand.initHand();
-            this.pHandLabel.setText(TwentyOne.myHand.returnHand());                
+            displayPlayerCards();
+               
             int check = TwentyOne.myHand.checkValue();
             if (check == 21) {
-                this.statusLabel.setText("21 you win!");
+                this.statusLabel.setText("21!");
+                hitButton.setEnabled(false);              
                 }           
             this.statusLabel.setText("The Value of Your Hand is " + TwentyOne.myHand.checkValue() + "\n");
             playerScore = TwentyOne.myHand.checkValue(); 
@@ -269,7 +319,7 @@ public class GameFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_dealButtonActionPerformed
 
     private void standButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_standButtonActionPerformed
-        this.pHandLabel.setText(TwentyOne.myHand.returnHand()); 
+ 
         this.statusLabel.setText("Player Holds " + TwentyOne.myHand.checkValue() + "\n");
         playerScore = TwentyOne.myHand.checkValue(); 
         System.out.println("playerScore: "+ playerScore + "\tdealerScore: "+ dealerScore);
@@ -320,7 +370,11 @@ public class GameFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel buttonPanel;
-    private javax.swing.JLabel dHandLabel;
+    private javax.swing.JLabel dCard1;
+    private javax.swing.JLabel dCard2;
+    private javax.swing.JLabel dCard3;
+    private javax.swing.JLabel dCard4;
+    private javax.swing.JLabel dCard5;
     private javax.swing.JLabel dStatusLabel;
     private javax.swing.JButton dealButton;
     private javax.swing.JLabel dealerLabel;
@@ -329,7 +383,11 @@ public class GameFrame extends javax.swing.JFrame {
     private javax.swing.JButton hitButton;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JLabel pHandLabel;
+    private javax.swing.JLabel pCard1;
+    private javax.swing.JLabel pCard2;
+    private javax.swing.JLabel pCard3;
+    private javax.swing.JLabel pCard4;
+    private javax.swing.JLabel pCard5;
     private javax.swing.JLabel playerLabel;
     private javax.swing.JPanel playerPanel;
     private javax.swing.JButton standButton;
@@ -343,7 +401,6 @@ public class GameFrame extends javax.swing.JFrame {
 
         String dealerHand = "";
         TwentyOne.myHand.initHand();
-        this.dHandLabel.setText(TwentyOne.myHand.returnHand());
 
         if (TwentyOne.myHand.checkValue() == 21) {
             this.dStatusLabel.setText("Dealer holds 21");
@@ -353,7 +410,6 @@ public class GameFrame extends javax.swing.JFrame {
             }
             else while (TwentyOne.myHand.checkValue() <= 17) {
                 TwentyOne.myHand.addCard();
-                this.dHandLabel.setText(TwentyOne.myHand.returnHand());
                 this.dStatusLabel.setText("Dealer Shows " + TwentyOne.myHand.checkValue());
                 if (TwentyOne.myHand.checkValue() > 21) {
                     this.dStatusLabel.setText("Dealer Busts ");
@@ -361,7 +417,7 @@ public class GameFrame extends javax.swing.JFrame {
             }
             dealerHand = TwentyOne.myHand.returnHand();
             dealerScore = TwentyOne.myHand.checkValue();
-                    System.out.println("playerScore: "+ playerScore + "\tdealerScore: "+ dealerScore);
+            displayDealerCards();
     return dealerHand;   
     }    
     public String displayResults() {
@@ -379,5 +435,31 @@ public class GameFrame extends javax.swing.JFrame {
           
             
         }return results;
+    }
+    public void displayPlayerCards() {
+        pCard1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/"+ TwentyOne.myHand.returnFileName(0) +".png")));
+        pCard2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/"+ TwentyOne.myHand.returnFileName(1) +".png")));
+        pCard3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/"+ TwentyOne.myHand.returnFileName(2) +".png"))); 
+        pCard4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/"+ TwentyOne.myHand.returnFileName(3) +".png")));
+        pCard5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/"+ TwentyOne.myHand.returnFileName(4) +".png")));
+    }
+    public void displayDealerCards() {
+        dCard1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/"+ TwentyOne.myHand.returnFileName(0) +".png")));
+        dCard2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/"+ TwentyOne.myHand.returnFileName(1) +".png")));
+        dCard3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/"+ TwentyOne.myHand.returnFileName(2) +".png"))); 
+        dCard4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/"+ TwentyOne.myHand.returnFileName(3) +".png")));
+        dCard5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/"+ TwentyOne.myHand.returnFileName(4) +".png")));
+    }  
+    public void resetCards() {
+        dCard1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/blank.png"))); 
+        dCard2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/blank.png"))); 
+        dCard3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/blank.png")));
+        dCard4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/blank.png"))); 
+        dCard5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/blank.png"))); 
+        pCard1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/blank.png"))); 
+        pCard2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/blank.png"))); 
+        pCard3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/blank.png")));
+        pCard4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/blank.png"))); 
+        pCard5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/blank.png")));         
     }
 }

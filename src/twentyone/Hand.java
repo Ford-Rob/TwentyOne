@@ -5,6 +5,7 @@
 package twentyone;
 
 import robandwade.cit260.twentyone.models.Card;
+import robandwade.cit260.twentyone.exceptions.HandException;
 import twentyone.TwentyOne;
 /**
  *
@@ -14,6 +15,7 @@ public class Hand {
     int place = 2;
      Card[] hand = new Card[5];
      int[] Hand = {0,0,0};
+     boolean hasAce = false;     
      
         
      public Hand(){
@@ -21,6 +23,7 @@ public class Hand {
          hand[1] = new Card();
      }
      public void initHand(){
+         hasAce = false;
          Hand [0] = 0;
          Hand [1] = 0;
          Hand [2] = 0;
@@ -39,12 +42,32 @@ public class Hand {
     }    
     public int checkValue(){
         int handValue = 0;
+
         for (int i = 0; i < place; i++){
+            System.out.println(hasAce);
+            if (hand[i].getCardValue() == 11) {
+                hasAce = true;
+            }
             handValue += hand[i].getCardValue();
+            if (handValue > 21) {
+                if (hasAce == true) {
+                handValue = handValue -10;
+                hasAce = false;}
+            }
         }
         return handValue;    
     }
-    
+    public String returnFileName(int i){
+        String cardFileName ="";
+        try {
+            cardFileName = hand[i].getFileName();
+        } catch (NullPointerException e) {    
+            cardFileName= "blank";
+        }    
+
+
+        return cardFileName;
+    }
     public void displayHand(){
         for (int i = 0; i < place; i++){
             System.out.print(hand[i] + " ");
