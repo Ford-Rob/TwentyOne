@@ -44,7 +44,6 @@ public class Hand {
         int handValue = 0;
 
         for (int i = 0; i < place; i++){
-            System.out.println(hasAce);
             if (hand[i].getCardValue() == 11) {
                 hasAce = true;
             }
