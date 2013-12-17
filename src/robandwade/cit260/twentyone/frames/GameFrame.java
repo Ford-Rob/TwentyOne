@@ -34,12 +34,12 @@ public class GameFrame extends javax.swing.JFrame {
 
         gamePanel = new javax.swing.JPanel();
         playerPanel = new javax.swing.JPanel();
-        playerLabel = new javax.swing.JLabel();
-        pCard2 = new javax.swing.JLabel();
+              pCard2 = new javax.swing.JLabel();
         pCard1 = new javax.swing.JLabel();
         pCard3 = new javax.swing.JLabel();
         pCard4 = new javax.swing.JLabel();
         pCard5 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         dealerLabel = new javax.swing.JLabel();
         dCard1 = new javax.swing.JLabel();
@@ -58,9 +58,7 @@ public class GameFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        playerLabel.setText("Player1");
-
-        pCard2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/blank.png"))); // NOI18N
+                pCard2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/blank.png"))); // NOI18N
 
         pCard1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/blank.png"))); // NOI18N
 
@@ -70,14 +68,17 @@ public class GameFrame extends javax.swing.JFrame {
 
         pCard5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/blank.png"))); // NOI18N
 
+        jLabel1.setText("Player");
+
         javax.swing.GroupLayout playerPanelLayout = new javax.swing.GroupLayout(playerPanel);
         playerPanel.setLayout(playerPanelLayout);
         playerPanelLayout.setHorizontalGroup(
             playerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(playerPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(playerLabel)
-                .addGap(149, 149, 149)
+                               .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(pCard1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(pCard2)
@@ -87,7 +88,7 @@ public class GameFrame extends javax.swing.JFrame {
                 .addComponent(pCard4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(pCard5)
-                .addContainerGap(29, Short.MAX_VALUE))
+                .addGap(29, 29, 29))
         );
         playerPanelLayout.setVerticalGroup(
             playerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -95,13 +96,15 @@ public class GameFrame extends javax.swing.JFrame {
             .addGroup(playerPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(playerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(playerPanelLayout.createSequentialGroup()
-                        .addComponent(playerLabel)
-                        .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(pCard3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(pCard4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(pCard5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(pCard1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(pCard1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(playerPanelLayout.createSequentialGroup()
+                        .addGroup(playerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1)
+                            )
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
@@ -381,6 +384,7 @@ public class GameFrame extends javax.swing.JFrame {
     private javax.swing.JLabel gStatusLabel;
     private javax.swing.JPanel gamePanel;
     private javax.swing.JButton hitButton;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel pCard1;
@@ -388,8 +392,7 @@ public class GameFrame extends javax.swing.JFrame {
     private javax.swing.JLabel pCard3;
     private javax.swing.JLabel pCard4;
     private javax.swing.JLabel pCard5;
-    private javax.swing.JLabel playerLabel;
-    private javax.swing.JPanel playerPanel;
+      private javax.swing.JPanel playerPanel;
     private javax.swing.JButton standButton;
     private javax.swing.JLabel statusLabel;
     // End of variables declaration//GEN-END:variables

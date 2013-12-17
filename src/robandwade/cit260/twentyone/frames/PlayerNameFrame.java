@@ -6,6 +6,7 @@ package robandwade.cit260.twentyone.frames;
 
 import robandwade.cit260.twentyone.control.PlayerNameMenuControl;
 import twentyone.Game;
+import twentyone.TwentyOne;
 
 /**
  *
@@ -132,7 +133,7 @@ public class PlayerNameFrame extends javax.swing.JFrame {
 
     private void continueToGame() {
         String playerAName = this.jtPlayerAName.getText();
-
+        TwentyOne.myPlayer.setName(playerAName);
         PlayerNameMenuControl.savePlayersNames(playerAName);
         GameFrame gameFrame = new GameFrame();
         gameFrame.setVisible(true);

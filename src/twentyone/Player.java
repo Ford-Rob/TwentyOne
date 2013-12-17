@@ -22,8 +22,8 @@ public class Player {
     private PlayerType playerType;
         
         
-    public Player(PlayerType playerType) {
-        this.playerType = playerType;}  
+    public void Player() {
+        playerName[0] ="";}  
 
     public void multiPlayer() {
         while(numberofPlayers == 0) {
