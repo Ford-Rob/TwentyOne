@@ -6,6 +6,8 @@
 
 package robandwade.cit260.twentyone.frames;
 
+import twentyone.Start;
+import borrowedCode.Game;
 /**
  *
  * @author Wade
@@ -53,7 +55,7 @@ public class MainFrame extends javax.swing.JFrame {
         jpTitleLayout.setHorizontalGroup(
             jpTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpTitleLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(105, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(91, 91, 91))
         );
@@ -68,6 +70,11 @@ public class MainFrame extends javax.swing.JFrame {
         jpMenuItems.setBackground(new java.awt.Color(204, 204, 255));
 
         jbStart.setText("Start");
+        jbStart.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbStartActionPerformed(evt);
+            }
+        });
 
         jbHelp.setText("Help");
         jbHelp.addActionListener(new java.awt.event.ActionListener() {
@@ -125,8 +132,8 @@ public class MainFrame extends javax.swing.JFrame {
                     .addComponent(jpTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jpBodyLayout.createSequentialGroup()
                         .addComponent(jpMenuItems, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 213, Short.MAX_VALUE)))
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane1)))
                 .addContainerGap())
         );
         jpBodyLayout.setVerticalGroup(
@@ -134,7 +141,7 @@ public class MainFrame extends javax.swing.JFrame {
             .addGroup(jpBodyLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jpTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
                 .addGroup(jpBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jpMenuItems, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jScrollPane1))
@@ -169,6 +176,11 @@ public class MainFrame extends javax.swing.JFrame {
         HelpFrame helpFrame = new HelpFrame();
         helpFrame.setVisible(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jbHelpActionPerformed
+
+    private void jbStartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbStartActionPerformed
+        PlayerNameFrame playerNameFrame = new PlayerNameFrame();// 
+        playerNameFrame.setVisible(true);
+    }//GEN-LAST:event_jbStartActionPerformed
 
     /**
      * @param args the command line arguments

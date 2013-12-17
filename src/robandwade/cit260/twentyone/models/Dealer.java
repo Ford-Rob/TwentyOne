@@ -14,11 +14,12 @@ import twentyone.TwentyOne;
 
 public class Dealer {
 
-    public Dealer() {
+    public String Dealer() {
 
+        String dealerHand = "";
         System.out.println("Dealer's Turn");
         TwentyOne.myHand.initHand();
-        TwentyOne.myHand.displayHand();
+
 
         if (TwentyOne.myHand.checkValue() == 21) {
             System.out.println("Dealer holds 21");
@@ -34,6 +35,9 @@ public class Dealer {
                     System.out.println("Dealer Busts ");
                 }             
             }
+            dealerHand = TwentyOne.myHand.returnHand();
+            TwentyOne.myHand.recordValue(2);
+    return dealerHand;   
     }
 }
 

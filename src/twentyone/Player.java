@@ -6,7 +6,7 @@ package twentyone;
 
 import java.util.Scanner;
 import robandwade.cit260.twentyone.exceptions.PlayerException;
-
+import robandwade.cit260.twentyone.enums.PlayerType;
 /**
  * @author WMitchell
  * @author RFord
@@ -18,17 +18,12 @@ public class Player {
     String stringInput;
     static Scanner input = new Scanner(System.in);
     static String nameInput;
+    private String name;
+    private PlayerType playerType;
         
         
-    public void getName() {
-        for (int i=0; i < playerName.length; i++){ 
-            int pnum =i+1;
-            System.out.println("\nPlayer " + pnum + " Enter your name: ");
-            nameInput = Player.input.next();
-            playerName[i] = nameInput;
-            System.out.println("\nWelcome " + playerName[i] + "\n");
-        }
-    }           
+    public Player(PlayerType playerType) {
+        this.playerType = playerType;}  
 
     public void multiPlayer() {
         while(numberofPlayers == 0) {
@@ -64,6 +59,13 @@ public class Player {
     public String currentPlayer(int current) {
         return playerName[current];
         
+    }
+        public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }
 

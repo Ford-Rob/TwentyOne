@@ -14,7 +14,7 @@ import robandwade.cit260.twentyone.enums.ErrorType;
  */
 public class TwentyOne {
     public static Hand myHand = new Hand();
-    public static Player myPlayer = new Player();
+//    public static Player myPlayer = new Player();
     public static Deck myDeck = new Deck();
     public static int currentPlayer;
     public static MainFrame mainFrame = null;

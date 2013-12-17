@@ -21,10 +21,17 @@ public class Hand {
          hand[1] = new Card();
      }
      public void initHand(){
+         Hand [0] = 0;
+         Hand [1] = 0;
+         Hand [2] = 0;
          hand = new Card[5];
          place = 2;         
          hand[0] = new Card();
          hand[1] = new Card();
+     }
+     
+     public void clearHand(){
+
      }
     public void addCard(){
         hand[place] = new Card();
@@ -44,26 +51,62 @@ public class Hand {
         }
         System.out.println("");
     }
-    public int recordValue(int player){
+    public int recordPlayer(){
         int handValue = 0;
         for (int i = 0; i < place; i++){
             handValue += hand[i].getCardValue();
+                    System.out.println( handValue);
         }
-        Hand[player] = handValue;
+        Hand[1] = handValue;
+        System.out.println(Hand[1]);
+        System.out.println(Hand[2]);
         return handValue;    
     }
-    public void displayResults() {
-        if (Hand[2] > 21) {Hand[2] = 0;}
-        for (int i = 0; i< TwentyOne.myPlayer.numberofPlayers; i++ ){
-            if (Hand[i] > 21){
-                System.out.println("I am sorry "+twentyone.Player.playerName[i] + ", you have lost.");
-            } else if (Hand[i] < Hand[2]){
-                System.out.println("I am sorry "+twentyone.Player.playerName[i] + ", you have lost.");
-            } else if (Hand[i] > Hand[2]){
-                System.out.println("Congratulations "+twentyone.Player.playerName[i] + "! You have won.");
-            } else if (Hand[i] == Hand[2]){
-                System.out.println(twentyone.Player.playerName[i] + "pushes.");
-            }
+        public int recordValue(int player){
+        int handValue = 0;
+        for (int i = 0; i < place; i++){
+            handValue += hand[i].getCardValue();
+                    System.out.println( handValue);
         }
+        Hand[2] = handValue;
+        System.out.println(Hand[1]);
+        System.out.println(Hand[2]);
+        return handValue;    
+    }
+    
+    public int recordDealer(){
+        int handValue = 0;
+        for (int i = 0; i < place; i++){
+            handValue += hand[i].getCardValue();
+                    System.out.println( handValue);
+        }
+        Hand[2] = handValue;
+        System.out.println(Hand[1]);
+        System.out.println(Hand[2]);
+        return handValue;    
+    }
+    public String displayResults() {
+        String results = "";
+        System.out.println(Hand[1] + " " + Hand[2]);
+        if (Hand[2] > 21) {Hand[2] = 0;}
+        if (Hand[1] > 21) {Hand[1] = 0;}
+
+            if (Hand[1] < Hand[2]){
+                results = Hand[1]  +" "+ Hand[2] + "I am sorry, you have lost.";
+            } else if (Hand[1] > Hand[2]){
+                results = Hand[1]  +" "+ Hand[2] + "Congratulations! You have won.";
+            } else if (Hand[1] == Hand[2]){
+                results = Hand[1] +" "+ Hand[2] + "It is a tie.";
+          
+            
+        }return results;
 }
+        public String returnHand(){
+        String myHand = "";    
+        
+        for (int i = 0; i < place; i++){
+            myHand = myHand + hand[i] + " ";
+        }
+        return myHand;
+        }
 }
